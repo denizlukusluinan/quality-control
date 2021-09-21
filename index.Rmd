@@ -1,8 +1,11 @@
 --- 
 title: "İstatistiksel Kalite Kontrol"
-author: "Dr. Busenur Kızılaslan"
+author: "Prof. Dr. Deniz İnan"
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
 documentclass: book
 bibliography:
 - book.bib
@@ -15,21 +18,12 @@ site: bookdown::bookdown_site
 
 # Ön Bilgi
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/dreamb.png" style="float: right;" width="300" height="300" title="Dream Big" /> 
 
 Ders notları temelde _IST3032 İstatistiksel Kalite Kontrol_ dersine kaynaklık etmesi amacıyla tasarlanmış olup konu çerçevesinde kendini geliştirmek isteyen herkesin faydalanabilmesi hedeflenmiştir.
 
 Ders dili Türkçe'dir. Bu bakımdan genel anlatımda Türkçe kullanılacaktır. Literatürü rahat takip edebilmeniz ve terim karmaşası yaşamamanız adına temel terim kısaltmaları orijinal haliyle kullanılacaktır (Kısaltmalar bölümünde hem Türkçe hem İngilizce açılımları bulabilirsiniz). Referans verilen kaynaklardan faydalanabilmeniz ve ders sürecinde incelemeniz gereken makalelerde zorluk yaşamamanız adına İngilizce eksikliğinizi gidermeniz önerilir. 
 
 Ders uygulamaları R programlama dili ile gerçekleştirilecek olup ödev uygulamalarınızı bu programlama dili ile hazırlamanız istenecektir, bu sebeple _Bilgisayar III_ ve _Bilgisayar IV_ ders notlarınızı gözden geçirmeniz faydalı olacaktır.
-
-Ders notunuz bookdown^[https://bookdown.org] ile hazırlanmış olup [linkten](https://busenurk.github.io/quality-control/_book/index.html) ulaşabilirsiniz. Ders notlarınızın pdf halini bookdown üzerinden indirebilirsiniz veya UZEM ders notları kısmından ulaşabilirsiniz.
-
-<br>
-
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/bookdown.png" style="float: center;" width="800" height="400" title="Bookdown" /> 
-
-<br>
 
 **Kaynaklar**
 
@@ -45,18 +39,10 @@ Ders notunuz bookdown^[https://bookdown.org] ile hazırlanmış olup [linkten](h
 
 ## Hakkımda
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/busenur1.jpg" style="float: right;" width="270" height="350" title="Busenur" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/Deniz1.jpg" style="float: right;" width="270" height="350" title="Busenur" /> 
 
-2012 yılında Mimar Sinan G. S. Üniversitesi istatistik bölümünde lisans öğrenimimi tamamlamamın ardından 2014 yılı itibariyle Marmara Üniversitesi istatistik bölümünde araştırma görevlisi olarak göreve başladım. Eş zamanlı olarak başladığım yüksek lisans öğrenimimi yine Mimar Sinan G. S. Üniversitesi istatistik anabilim dalında tamamlarken artık çalışma alanım bulanık mantık ([fuzzy logic](https://en.wikipedia.org/wiki/Fuzzy_logic)) olarak şekillenmişti. Bir buçuk yılda tamamladığım yüksek lisansın ardından farklı bakış açısı kazanma fikriyle yönümü Yıldız Teknik Üniversitesi'ne çevirdim. 2015 yılında istatistik bölümünde başladığım doktora öğrenimimi 2020 yılında yine bulanık mantık ile öngörü üzerine hazırladığım tezim ile tamamladım. Doktora öğrenimim sırasında İstanbul Teknik Üniversitesi endüstri mühendisliği bölümünden de çeşitli dersler alarak alanında uzman hocaların^[[Prof. Dr. Cengiz Kahraman](http://akademi.itu.edu.tr/kahramanc/)] bilgilerinden faydalanma imkanı buldum. 
-
-Akademik kariyer hedefiyle başlamadığım öğrenim yaşamımda ufku açık, aydınlık ve birikimli hocalarım yolumu bulmama yardımcı olmuştur. 2018 yılında Polonya'da gerçekleşen [International Conference on Trends and Perspectives in Linear Statistical Inference (LinStat'2018)](http://www.linstat2018.put.poznan.pl/ysa.html) kapsamında sunduğum, doktora tezimin bir kısmından oluşan çalışma ile aldığım Young Scientists Awards ikincilik ödülü de yanlış yolda olmadığımı göstermiştir. 
-
-Üzerimde emeği olan herkese teşekkürlerimle!
-
-<br>
-
-[**CV**](https://avesis.marmara.edu.tr/busenur.sarica), [**Google Scholar**](https://scholar.google.com.tr/citations?user=OKlYJEgAAAAJ&hl=tr), [**Linkedin**](https://www.linkedin.com/in/busenur-kızılaslan-795ab54a)
-
+Marmara Üniversitesi Matematik Bölümünden 2002 yılında mezun olup aynı üniversitede Matematik doktoramı 2010 yılında tamamladım. Marmara Üniversitesi, Matematik ve İstatistik bölümlerinde 10 yıl araştırma görevlisi olarak çalıştıktan sonra 2013 yılında Marmara Üniversitesi İstatistik Bölümü’ne yardımcı doçent doktor olarak atanarak, Marmara İstatistik Bölümü’nün kadrosuna atanan ilk öğretim elemanı oldum. 2009 yılında kurulan Marmara İstatistik Bölümü'nün ilk kurucularındanım. 
+Uygulamalı Matematik anabilim dalında Yüksek Lisans ve Doktora dönemimde ağırlıklı olarak sağkalım analizi konularında çalışmalar yaptıktan sonra, 2015 yılında İstatistik alanında Doçent Ünvanı aldım.  Marmara Üniversitesi’nde; olasılık, istatistik, programlama, örnekleme, deney tasarımı, regresyon analizi, veri madenciliği, zaman serileri analizi, sağkalım analizi, biyoistatistik, matematik istatistik gibi pek çok farklı alanda ders verdim. 2021 yılında İstatistik Profesörü ünvanını aldım ve halen Marmara Üniversitesinde ders vermekteyim.
 
 
 

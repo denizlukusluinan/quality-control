@@ -2,7 +2,7 @@
 
 ## Değişkenlik Kavramı ve Kaynakları
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/covid.jpg" style="float: right;" width="300" height="400" title="Variability" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/covid.jpg" style="float: right;" width="300" height="400" title="Variability" />
 
 Her prosesin doğasında var olan değişkenlik, ürünlerden birinin diğerinden farklı olmasına sebep olmaktadır. Esasen değişkenlik kavramı doğanın bir kanunudur ve herhangi bir kategorideki iki doğal maddenin birbirinin tam olarak aynısı olmamasını ifade etmektedir. 
 
@@ -23,17 +23,17 @@ Bu tür bir değişkenlik, arka plan gürültüsüyle karşılaştırıldığın
 
 Özel nedenler arasında, doğal olarak kararlı olduğunda prosesin kurcalanması veya gereksiz şekilde ayarlanması gibi yapısal değişiklikler yer alır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/vva.png" style="float: center;" width="700" height="450" title="Variability" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/vva.png" style="float: center;" width="700" height="450" title="Variability" />
 
 - Genel neden değişkenliği; sürecin doğası
 
 - Özel neden değişkenliği; gerçek değişiklikler 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/causes.png" style="float: center;" width="500" height="450" title="Causes" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/causes.png" style="float: center;" width="500" height="450" title="Causes" />
 
 Değişkenlik; ekipman, malzeme, ortam, ve operatör kaynaklı olarak her proseste mevcuttur. Bir üretim prosesinde mevcut olabilecek değişkenlik kaynakları aşağıdaki görselde sunulmuştur.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/varkay.png" style="float: center;" width="600" height="270" title="Değişkenlik Kaynakları" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/varkay.png" style="float: center;" width="600" height="270" title="Değişkenlik Kaynakları" />
 
 Değişkenlik genel ve özel nedenlerden kaynaklanabilir. İstatistiksel kalite kontrolde , yalnız genel nedenlerden kaynaklı bir değişkenlik söz konusu ise prosesin istatistiksel olarak kontrol altında olduğu söylenebilir. Bu durumda proses stabildir ve tahmin edilebilir niteliktedir.
 
@@ -50,7 +50,7 @@ Bir ürün müşteri beklentilerini karşılayacak veya aşacaksa, genellikle is
 - Proses hassasiyetinin yokluğunu düzeltmek üzere ayar yapmak, yayılmayı düzeltmek için gereken araştırmayı yapmaktan genellikle daha kolaydır.
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/vari.png" style="float: center;" width="600" height="600" title="Variability" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/vari.png" style="float: center;" width="600" height="600" title="Variability" />
 
 Şekilde görülen dağılımlara göre;
 
@@ -66,7 +66,7 @@ Bir ürün müşteri beklentilerini karşılayacak veya aşacaksa, genellikle is
 
 ## Kontrol Diyagramlarına Giriş
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/tms.jpg" style="float: right;" width="250" height="300" title="The Magnificent Seven" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/tms.jpg" style="float: right;" width="250" height="300" title="The Magnificent Seven" />
 
 
 SPC, yirminci yüzyılın en büyük teknolojik gelişmelerinden biridir, çünkü sağlam temel ilkelere dayanır, kullanımı kolaydır, önemli bir etkiye sahiptir ve herhangi bir sürece uygulanabilir. Bu bakımdan SPC'nin yedi temel aracı (**the magnificent seven**)
@@ -97,7 +97,7 @@ Son olarak, istatistiksel süreç kontrolünün nihai amacının süreçteki de�
 
 Kalite kontrol diyagramının seçimi ilk olarak toplanan veri tipinin sürekli ya da kesikli olmasına göre farklılık göstermektedir. Diyagram seçimindeki ilerleyen adımları aşağıdaki tablodan inceleyebilirsiniz. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/contc.png" style="float: center;" width="700" height="400" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/contc.png" style="float: center;" width="700" height="400" title="CC" />
 
 Tabloda yer alan kontrol diyagramları dışında sürekli veri tipinde daha hassas analizler için kullanılan **EWMA (Üstel Ağırlıklandırılmış Hareketli Ortalamalar)** ve **CUSUM (Kümülatif Toplam)** gibi farklı kontrol diyagramları da söz konusudur. 
 
@@ -109,7 +109,7 @@ Kalite kontrol diyagramları, diyagram türünden bağımsız olarak
 
 oluşmaktadır. Kontrol limitleri merkez çizgisinin $\pm3 \sigma$ uzaklığında olmaktadır. Merkez çizgisi ise kalite diyagramına bağlı olarak incelenecek kalite özelliğinin ortalamasına eşittir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cc1.png" style="float: center;" width="500" height="400" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cc1.png" style="float: center;" width="500" height="400" title="CC" />
 
 $UCL=CL+3\sigma$
 
@@ -119,7 +119,7 @@ Bu kontrol limitleri, eğer proses kontrol altında ise, numune noktalarının n
 
 Bununla birlikte, kontrol sınırlarının dışında kalan bir nokta, sürecin kontrol dışı olduğunun kanıtı olarak yorumlanır ve değişkenliğin özel nedeni olduğunu ifade eder.Bu problem ile ilgili sorumlu atanabilir, nedeni veya nedenleri bulmak ve ortadan kaldırmak için araştırma ve düzeltici eylem gereklidir. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cc4.png" style="float: center;" width="500" height="250" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cc4.png" style="float: center;" width="500" height="250" title="CC" />
 
 Tüm noktalar kontrol limitleri içinde çizilse bile, sistematik veya rastgele olmayan bir şekilde davranıyorlarsa, bu sürecin kontrol dışı olduğunun bir göstergesi olabilir. Örneğin, son 20 noktanın 18'i merkez çizgisinin üzerinde ancak üst kontrol sınırının altında çizilirse ve bu noktalardan yalnızca ikisi merkez çizgisinin altında ancak alt kontrol sınırının üzerinde çizilirse, bir şeylerin ters gittiği düşünülebilir. 
 
@@ -161,11 +161,11 @@ $\mu=1.5$
 
 $\mu\neq1.5$
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cc2.png" style="float: center;" width="500" height="400" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cc2.png" style="float: center;" width="500" height="400" title="CC" />
 
 Esasen burada alt ve üst sınırların hesabı güven aralıkları yaklaşımından doğmaktadır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ci.png" style="float: center;" width="600" height="100" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ci.png" style="float: center;" width="600" height="100" title="CC" />
 
 $1.5-Z_{\alpha/2}(0.0671)$
 
@@ -185,11 +185,11 @@ Kontrol diyagramlarının avantajlarından bahsetmek gerekirse;
 
 - Süreç kapasitesi hakkında bilgi sağlar.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cc3.png" style="float: center;" width="650" height="400" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cc3.png" style="float: center;" width="650" height="400" title="CC" />
 
 ### Kontrol Limitlerinin Seçimi
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/errors.png" style="float: right;" width="350" height="300" title="Error Types" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/errors.png" style="float: right;" width="350" height="300" title="Error Types" />
 
 Kontrol limitlerinin belirlenmesi, bir kontrol diyagramı tasarlanırken verilmesi gereken kritik kararlardan biridir. Bu karara bağlı olarak Tip 1 ve Tip 2 hata olasılıklarında artış veya azalış meydana gelebilir.
 
@@ -201,6 +201,6 @@ Kontrol sınırlarını merkez hattından daha uzağa taşımak, Tip I hata risk
 
 Kontrol limitlerini merkez hattına yaklaştırmak, ters etkiye neden olup; Tip I hata riskini artırırken Tip II hata riski azaltacaktır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/normali.png" style="float: center;" width="600" height="300" title="CC" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/normali.png" style="float: center;" width="600" height="300" title="CC" />
 
 

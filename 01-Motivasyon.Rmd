@@ -5,7 +5,7 @@ output:
 ---
 # Motivasyon
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/dprize.png" style="float: right;" width="250" height="250" title="Deming Prize" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/dprize.png" style="float: right;" width="250" height="250" title="Deming Prize" /> 
 
 Kaliteyi kontrol etmek ve iyileştirmek rekabet ortamında kazananı belirleyen faktör haline gelmiştir. Bu bakımdan doğru yürütülen bir kalite kontrol süreci başarının anahtarı olacaktır. Sürecin başarılı yürütülmesi ise ancak alanında uzman kişilerin önderliğinde mümkündür. 
 

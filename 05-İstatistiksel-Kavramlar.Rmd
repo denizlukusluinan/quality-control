@@ -14,7 +14,7 @@ output:
 
 ## Verilerin Toplanması ve Sunulması
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/alien.jpg" style="float: right;" width="400" height="270" title="Remind!" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/alien.jpg" style="float: right;" width="400" height="270" title="Remind!" /> 
 
 Veri; analiz, karar ve faaliyet için temeldir bu nedenle tüm veriler özellikle işlem ve üretim noktalarında kayıt edilmelidir. Sistematik ve doğru kayıt bu bakımdan oldukça önemlidir. Verinin yapısı prosesten prosese farklılık gösterebilir. Maliyet ve emek kaybının önlenmesi için yalnızca ihtiyaç duyulan veriler kayıt altına alınmalıdır. 
 
@@ -62,7 +62,7 @@ Verilerin sunulması için kullanılan başarılı görsellerden biri de dal-yap
 
 Çalışan Sağlık Sigortası Taleplerinin Ödenmesi İçin Gün Olarak Döngü Süresi 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/claim.png" style="float: center;" width="500" height="250" title="Claim-Days" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/claim.png" style="float: center;" width="500" height="250" title="Claim-Days" /> 
 
 ```{r include=FALSE,cache=TRUE}
 claim<-1:40
@@ -210,7 +210,7 @@ Frekans dağılımının simetrik, sağa veya sola çarpık olma durumu merkezi 
 
 **Ortalama:** $x_{1},x_{2},...,x_{n}$ örneklemde yer alan gözlemler olmak üzere;
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/mean.png" style="float: center;" width="700" height="110" title="Mean" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/mean.png" style="float: center;" width="700" height="110" title="Mean" />
 
 eşitliği, en önemli merkezi eğilim ölçüsü olan ortalamayı elde etmemizi sağlar. Gözlem değerlerinde meydana gelen çok küçük değişmeler aritmetik ortalamayı etkiler, bu nedenle aykırı değer durumunda kullanımına dikkat edilmelidir. Bir veride yalnızca bir aritmetik ortalama vardır. Nicel verilere uygulanabilir.
 
@@ -229,7 +229,7 @@ Medyan aykırı değerlerden etkilenmez, bu bakımdan aritmetik ortalamadan üst
 Bir frekans dağılımı için ortalama, medyan ve mod değerleri birbirine eşit ise dağılım **simetriktir (symmetrical)**. Mod $<$ Medyan $<$ Ortalama şeklinde sıralama söz konusu ise dağılım **sağa çarpık (positive skewness)**, Ortalama $<$ Medyan $<$ Mod şeklinde ise dağılım **sola çarpıktır (negative skewness)**.
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/sym.png" style="float: center;" width="900" height="300" title="Skewness" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/sym.png" style="float: center;" width="900" height="300" title="Skewness" /> 
 
 ```{r}
 # Frequency
@@ -274,12 +274,12 @@ Merkezi eğilim ölçülerinin yanında, verinin nasıl yayıldığını ve orta
 
 **Standart Sapma:** Standart sapma, yayılım için kullanılan bir diğer ölçüdür. Verinin sınıflandırılmış veya sınıflandırılmamış olmasına bağlı olarak farklı şekillerde hesaplanmaktadır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/sd.png" style="float: center;" width="700" height="110" title="Sd" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/sd.png" style="float: center;" width="700" height="110" title="Sd" />
 
 **Varyans:** Varyans en hassas yayılım ölçüsüdür. Gözlemler arasındaki değişimi ölçer. Varyansın pozitif karekökü ise standart sapmayı ifade eder. Verideki birimlerin değerleri aritmetik ortalama etrafında yoğunlaşıyorsa varyans küçüktür ve bu durum verinin homojen olduğunu dolayısı ile kaliteyi gösterir. Gözlemlerin aldıkları değerler aynı ise varyans sıfırdır. Aşağıdaki eşitlikte örneklem varyansı formülasyonu yer almaktadır. 
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/var.png" style="float: center;" width="700" height="110" title="Variance" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/var.png" style="float: center;" width="700" height="110" title="Variance" />
 
 <br>
 
@@ -301,7 +301,7 @@ Kutu grafiğinin oluşturulabilmesi için gerekli 5 önemli değer bulunmaktadı
 
 > En küçükten en büyüğe sıralanmış verileri 4 eşit parçaya bölen değerlere çeyrek değerler ya da kartiller denir. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/boxplot.jpg" style="float: center;" width="500" height="250" title="Box Plot" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/boxplot.jpg" style="float: center;" width="500" height="250" title="Box Plot" />
 
 $Q_{1}=(n+1)/4$
 
@@ -340,24 +340,24 @@ Olasılık dağılımları ve özellikle normal dağılım istatistiksel kalite 
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/dist.png" style="float: center;" width="800" height="300" title="Box Plot" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/dist.png" style="float: center;" width="800" height="300" title="Box Plot" />
 
 
 Kesikli ve sürekli olasılık dağılımları sırasıyla $(a)$ ve $(b)$ ile grafiksel olarak gösterilmiştir. $X$ rasgele değişkeninin bir $x_{i}$ değerini alma olasılığı;
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/disc.png" style="float: center;" width="700" height="60" title="Discrete" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/disc.png" style="float: center;" width="700" height="60" title="Discrete" />
 
 Sürekli dağılımda olasılık eğrinin altında kalan alana karşılık gelmektedir, $X$ rasgele değişkeninin $a$ ve $b$ arasında olma olasılığı; 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cont.png" style="float: center;" width="700" height="60" title="Continuous" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cont.png" style="float: center;" width="700" height="60" title="Continuous" />
 
 Bir olasılık dağılımının ortalaması, dağılımın merkezi eğiliminin bir ölçüsüdür. Ortalama, kesikli ve sürekli dağılımlar için aşağıdaki gibi tanımlanır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/distmu.png" style="float: center;" width="700" height="140" title="Mean" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/distmu.png" style="float: center;" width="700" height="140" title="Mean" />
 
 Bir dağılımdaki yayılma veya değişkenlik, varyans ile ifade edilir. Varyans, kesikli ve sürekli dağılımlar için aşağıdaki gibi tanımlanır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/distv.png" style="float: center;" width="700" height="140" title="Variance" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/distv.png" style="float: center;" width="700" height="140" title="Variance" />
 
 ## Önemli Kesikli Olasılık Dağılımları
 
@@ -367,7 +367,7 @@ Hipergeometrik dağılım istatistiksel kalite kontrolde, belirli sayıda kusurl
 
 Bazen sonlu elemanlı bir kitleden idesiz çekiliş yapılmak istenebilir. Bir deneyin sadece iki sonucu varsa, çekilen örnek sayısı n sabit ve denemeler bağımlı ise böyle durumlarda hipergeometrik dağılım kullanılır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/hipgeo.png" style="float: center;" width="600" height="370" title="Hipergeometrik" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/hipgeo.png" style="float: center;" width="600" height="370" title="Hipergeometrik" />
 
 **N:** Toplam eleman sayısı
 
@@ -381,10 +381,10 @@ Bazen sonlu elemanlı bir kitleden idesiz çekiliş yapılmak istenebilir. Bir d
 
 **Kombinasyon hatırlatma:** 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/comb.png" style="float: center;" width="150" height="80" title="Kombinasyon" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/comb.png" style="float: center;" width="150" height="80" title="Kombinasyon" />
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/phyp.png" style="float: center;" width="800" height="250" title="phyp.r" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/phyp.png" style="float: center;" width="800" height="250" title="phyp.r" />
 
 <br>
 
@@ -442,7 +442,7 @@ iade=1-sum; iade
 
 Sadece iki sonuç veren bir Bernoulli deneyinin n kez birbirinden bağımsız ve aynı koşullar altında tekrar ettiği biliniyorsa ve sıra gözetilmeden başarı türünden oluşan sonuçlarla ilgileniliyorsa bu dağılıma binom dağılımı denir. Binom dağılımı n (örnek büyüklüğü) ve p (hatalı/hatasız olasılığı) olmak üzere iki parametreye sahiptir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/binom.png" style="float: center;" width="600" height="280" title="Binom" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/binom.png" style="float: center;" width="600" height="280" title="Binom" />
 
 <br>
 
@@ -509,7 +509,7 @@ $\lambda=np$
 
 Poisson dağılımı, kabul örneklemesi ve ölçülemeyen özellikler için kontrol diyagramlarında bir temel oluşturmaktadır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/poisson.png" style="float: center;" width="600" height="300" title="Poisson" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/poisson.png" style="float: center;" width="600" height="300" title="Poisson" />
 
 **Örnek:** Bir fabrikada üretilen ürünler 0.004 olasılıkla kusurludur. Üretilen bu ürünlerden rassal örnekleme ile 1000 adet alınmıştır.
 
@@ -590,7 +590,7 @@ dpois(x = 0, lambda =lambda2)
 
 ### Normal Dağılım
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/nd1.png" style="float: right;" width="300" height="150" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/nd1.png" style="float: right;" width="300" height="150" title="Normal Dağılım" />
 
 İstatistiksel proses kontrol uygulamalarında kullanılan sayısal hesaplamaların önemli bir bölümü verinin normal dağılıma uyduğu kabulüne göre yapılmaktadır.
 
@@ -600,17 +600,17 @@ Gauss dağılımı olarak da bilinen normal dağılım aşağıdaki temel özell
 - Veriler ortalama etrafında yoğunlaşmıştır. Eğri altındaki alan tüm olasılıklar toplamına eşit yani 1'dir.
 - Dağılımın tek bir zirvesi vardır, ortalama, mod ve medyan değeri aynıdır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/normdist.png" style="float: center;" width="700" height="250" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/normdist.png" style="float: center;" width="700" height="250" title="Normal Dağılım" />
 
 Popülasyon değerlerinin %68.26'sının ortalama artı ve eksi bir standart sapma ($\mu$ ± 1$\sigma$) ile tanımlanan sınırlar arasında kalır, değerlerin %95.46'sı ortalama artı ve eksi iki standart sapma ($\mu$ ± 2$\sigma$) ile tanımlanan sınırlar arasında kalır; ve popülasyon değerlerinin %99.73'ü ortalama artı ve eksi üç standart sapma ($\mu$ ± 3$\sigma$) ile tanımlanan sınırlar dahilindedir. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/nd2.png" style="float: center;" width="500" height="350" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/nd2.png" style="float: center;" width="500" height="350" title="Normal Dağılım" />
 
 Ortalaması ve standart sapması bilinen bir popülasyona ait normal dağılım olasılıklarını hesaplayabilmek için standart normal dağılım tablosu kullanılmaktadır. Standart normal dağılım; Z$\sim$N(0,1) şeklinde ifade edilmektedir. Bir _X_ değişkeni aşağıdaki eşitlik yardımı ile Z standart normal değerine dönüştürülür ve bu sayede standart normal dağılım tablosu kullanılabilir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/norm.png" style="float: center;" width="90" height="70" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/norm.png" style="float: center;" width="90" height="70" title="Normal Dağılım" />
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ntable.png" style="float: center;" width="500" height="700" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ntable.png" style="float: center;" width="500" height="700" title="Normal Dağılım" />
 
 ```{r}
 x=seq(0,3.09,by=0.01); head(x)
@@ -637,11 +637,11 @@ tablo
 ```
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/pnorm.png" style="float: center;" width="700" height="250" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/pnorm.png" style="float: center;" width="700" height="250" title="Normal Dağılım" />
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/pnormz.png" style="float: center;" width="700" height="220" title="Normal Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/pnormz.png" style="float: center;" width="700" height="220" title="Normal Dağılım" />
 
 <br>
 
@@ -704,7 +704,7 @@ which(emt==0.10)
 
 Üstel dağılım adını olasılık yoğunluk fonksiyonundaki üstel fonksiyondan alır. Üstel dağılım belirli bir olayın ortaya çıkmasına kadar geçen süre olarak ortaya tanımlanır. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/expo.png" style="float: center;" width="600" height="350" title="Üstel Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/expo.png" style="float: center;" width="600" height="350" title="Üstel Dağılım" />
 
 <br>
 
@@ -727,7 +727,7 @@ pexp(1, rate = 0.125, lower.tail = TRUE)*100
 
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/gamma.png" style="float: center;" width="600" height="350" title="Gamma Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/gamma.png" style="float: center;" width="600" height="350" title="Gamma Dağılım" />
 
 Olasılık ve istatistikte çok karşılaşılan dağılımların bazıları (Üstel ve Ki-Kare gibi) Gamma dağılımının özel halidir.
 
@@ -759,11 +759,11 @@ plot_ly(x=x,y=y)
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/acont.png" style="float: center;" width="400" height="150" title="Contamination" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/acont.png" style="float: center;" width="400" height="150" title="Contamination" />
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/others.png" style="float: center;" width="700" height="600" title="Plots" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/others.png" style="float: center;" width="700" height="600" title="Plots" />
 
 ## Bazı Faydalı Yaklaşımlar
 
@@ -780,7 +780,7 @@ Yaklaşım büyük $n$ değeri ve küçük $p$ değeri için uygundur (genellikl
 
 Binom dağılımı ile Poisson dağılımı arasında bir benzerlik kurulabilir. Örneğin, belirli bir saat dilimi içinde bir mağazaya giren müşterilerin sayısı Poisson rasgele değişkenidir. Oysa, mağazaya giren (maksimum müşteri sayısı sabit) her müşteriyi başarı olarak değerlendirirsek, mağazaya giren müşterilerin sayısı Binom dağılımına sahip olur. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/binpois.png" style="float: center;" width="700" height="350" title="Poisson-Binom Dağılım" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/binpois.png" style="float: center;" width="700" height="350" title="Poisson-Binom Dağılım" />
 
 Yukarıda, değişik $\mu$ değerleri için $Y\sim Poisson(\mu)$ ve $X\sim Binom(n,p)$ olmak üzere, $p=\mu/n$ alınarak $P(X=1)$ ve $P(Y=1)$ olasılıkları hesaplanarak (değerler dördüncü basamaktan sonra yuvarlatılmıştır) tablo halinde verilmiştir. Tablodaki değerlerden de görüldüğü gibi, $n$ değeri büyüdükçe, $P(X=1)$ Binom olasılıkları $P(Y=1)$ olasılıklarına yaklaşmaktadır.
 
@@ -796,7 +796,7 @@ $\sigma^{2}=Var(X)=npq$
 olarak hesaplanır. Bu durumda $X\sim N(np,npq)$ olur. Bu nedenle $p$ çok küçük değilse ve $n$ de büyükse binom dağılımına sahip $X$ değişkeninin belli bir değerden küçük ya da büyük olması veya herhangi iki değer arasında yer alma  olasılıkları standart normal dağılım tablosu kullanılarak hesaplanabilir. Fakat Binom dağılımı kesikli ve normal dağılım sürekli olduğundan standart normale dönüştürme yapılırken düzeltme işlemi yapılması gerekir. Bu düzeltme işlemi $\pm0.5$ değeri kullanılarak yapılır.   
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/pm.png" style="float: center;" width="420" height="230" title="Süreklilik Düzeltmesi" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/pm.png" style="float: center;" width="420" height="230" title="Süreklilik Düzeltmesi" />
 
 <br>
 
@@ -888,13 +888,13 @@ pareto.chart(defect, ylab = "Error frequency")
 
 **Pareto Öncelik İndeksi (Pareto Priority Index):** Hangi hatanın düzeltilmesine öncelik verilmesi gerektiğini öngörmemizi sağlayan indekstir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ppi.png" style="float: center;" width="300" height="60" title="PPI" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ppi.png" style="float: center;" width="300" height="60" title="PPI" />
 
 Her bir hata düzeltme faaliyetini bir proje olarak planlamak gerekmektedir. Denklemdeki savings (tasarruf), bu hatayı ortadan kaldırdığımızda elde edilecek parasal tutarı, probability of success (başarı olasılığı), bu projenin başarılı olabilme şansını (0-1 aralığında), cost (proje maliyeti), bu projenin bize getireceği toplam maliyeti ve time of completion (projenin tamamlanma süresi), ay veya yıl olarak projenin ne kadar süre ile planlandığını ifade etmektedir. PPI'da en yüksek değerde olan hata unsurunun düzeltilmesi için bir çalışma başlatılması gerekmektedir.
 
 ## Sebep-Sonuç (Cause and Effect) Analizi 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/fishbone.png" style="float: right;" width="320" height="100" title="Check Sheet" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/fishbone.png" style="float: right;" width="320" height="100" title="Check Sheet" />
 
 Sebep-sonuç diyagramları Kaoru İshikawa tarafından 1943'te geliştirilmiştir. Belirli bir sorunun temel nedenini bulmak için olası nedenleri görselleştirmeye yardımcı olur. Kalite sorunlarını belirlemek, analiz etmek ve iyileştirmek amacıyla kullanılır.  
 
@@ -918,7 +918,7 @@ Sebep-sonuç analizinin yararları şunlardır;
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/Fish1.png" style="float: center;" width="600" height="300" title="Fishbone" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/Fish1.png" style="float: center;" width="600" height="300" title="Fishbone" />
 
 <br>
 
@@ -926,7 +926,7 @@ Fishbone diyagramı DMAIC sürecinin analiz aşamasında da kullanılmaktadır.
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/Fish2.png" style="float: center;" width="600" height="300" title="Fishbone" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/Fish2.png" style="float: center;" width="600" height="300" title="Fishbone" />
 
 <br>
 
@@ -938,7 +938,7 @@ Fishbone diyagramının kullanımı ile;
 
 tanımlanabilmektedir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/Fish3.png" style="float: center;" width="600" height="300" title="Fishbone" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/Fish3.png" style="float: center;" width="600" height="300" title="Fishbone" />
 
 **Örnek1:**
 ```{r}
@@ -974,7 +974,7 @@ ss.ceDiag(b.effect, b.groups, b.causes, sub = "Construction Example")
 
 Kontrol listelerinin oluşturulmasının ana amacı; proses kontrolü ve problem çözümü için işletme personeli tarafından dikkatli şekilde ve doğru olarak veri toplanmasının sağlanmasıdır. Kontrol listelerinin yapısı, her bir durum için özelleştirilir ve proje takımı tarafından tasarlanır. Yaratıcılık, bir kontrol listesinin tasarlanmasında büyük rol oynamaktadır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/check.png" style="float: center;" width="420" height="300" title="Check Sheet" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/check.png" style="float: center;" width="420" height="300" title="Check Sheet" />
 
 Bu kontrol listesi örneğinde, her bir kalite kusuru nedeni ve bu nedenlerin gözlenme sayıları yer almaktadır. Operatör, her üründe gözlemlediği kalite kusurunu, bu listede işaretler ve muayene işlemi tamamlandığında her bir kusur tipi için toplam sayı belirlenir. Kontrol listesinin üst kısmında ise veri toplanan ürüne ve sürece ait bilgiler ile muayeneyi gerçekleştiren operatöre ait bilgiler yer almaktadır. 
 
@@ -1014,7 +1014,7 @@ s2<-plot_ly(data = mech1, x = ~var1, y = ~var1);s2
 
 Kusur verileri, yeterli sayıda birim üzerinde bir kusur konsantrasyon diyagramında gösterildiğinde, modeller ortaya çıkar ve bu modellerin konumu genellikle kusurların nedenleri hakkında çok fazla bilgi içerir. Kusur konsantrasyon diyagramı DMAIC sürecinin analiz kısmında oldukça kullanışlıdır. 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/dcd.png" style="float: center;" width="800" height="400" title="Defect Conc. Diag." />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/dcd.png" style="float: center;" width="800" height="400" title="Defect Conc. Diag." />
 
 Bir buzdolabı üretim sürecinin son montaj aşaması için bir kusur konsantrasyon diyagramı görselde yer almaktadır. Yüzey bitirme kusurları, buzdolabındaki koyu gölgeli alanlarla belirlenmiştir. Diyagram incelendiğinde, bu kusurların çoğundan malzeme işlemenin sorumlu olduğu açıkça görülmektedir. Ünite, ortasına bir kayış sabitlenerek hareket ediyor ve bu kayış ya çok gevşek ya da sıkı, yıpranmış, aşındırıcı malzemeden yapılmış ya da çok dar olabilir. Ayrıca ünite hareket ettirildiğinde köşeler zarar görür. İşçi yorgunluğunun olası bir faktör olarak değerlendirilebilir. Her halükarda, uygun çalışma yöntemleri ve iyileştirilmiş malzeme kullanımı bu süreci büyük ölçüde iyileştirecektir.
 

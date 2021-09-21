@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bölüm 4 Kalite Yönetimi Temel Kavramları | İstatistiksel Kalite Kontrol</title>
   <meta name="description" content="Statistical quality control lecture notes" />
-  <meta name="generator" content="bookdown 0.20.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bölüm 4 Kalite Yönetimi Temel Kavramları | İstatistiksel Kalite Kontrol" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="Statistical quality control lecture notes" />
   
 
-<meta name="author" content="Dr. Busenur Kızılaslan" />
+<meta name="author" content="Prof. Dr. Deniz İnan" />
 
 
-<meta name="date" content="2021-01-26" />
+<meta name="date" content="2021-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="ders-planı.html"/>
 <link rel="next" href="dmaic-süreci.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,36 +51,35 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.17/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -99,7 +99,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,6 +132,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -148,19 +149,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">İstatistiksel Kalite Kontrol</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ön Bilgi</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ön Bilgi</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#hakkımda"><i class="fa fa-check"></i><b>1.1</b> Hakkımda</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="motivasyon.html"><a href="motivasyon.html"><i class="fa fa-check"></i><b>2</b> Motivasyon</a></li>
 <li class="chapter" data-level="3" data-path="ders-planı.html"><a href="ders-planı.html"><i class="fa fa-check"></i><b>3</b> Ders Planı</a></li>
-<li class="chapter" data-level="4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html"><i class="fa fa-check"></i><b>4</b> Kalite Yönetimi Temel Kavramları</a><ul>
+<li class="chapter" data-level="4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html"><i class="fa fa-check"></i><b>4</b> Kalite Yönetimi Temel Kavramları</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-kavramı"><i class="fa fa-check"></i><b>4.1</b> Kalite Kavramı</a></li>
 <li class="chapter" data-level="4.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-boyutları"><i class="fa fa-check"></i><b>4.2</b> Kalite Boyutları</a></li>
 <li class="chapter" data-level="4.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-mühendislik-terminolojisi"><i class="fa fa-check"></i><b>4.3</b> Kalite Mühendislik Terminolojisi</a></li>
 <li class="chapter" data-level="4.4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#toplam-kalite-yönetiminin-tarihsel-gelişimi"><i class="fa fa-check"></i><b>4.4</b> Toplam Kalite Yönetiminin Tarihsel Gelişimi</a></li>
 <li class="chapter" data-level="4.5" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-kontrol-ve-iyileştirme-için-istatistiksel-yöntemler"><i class="fa fa-check"></i><b>4.5</b> Kalite Kontrol ve İyileştirme için İstatistiksel Yöntemler</a></li>
 <li class="chapter" data-level="4.6" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-iyileştirmede-yönetim-cephesi"><i class="fa fa-check"></i><b>4.6</b> Kalite İyileştirmede Yönetim Cephesi</a></li>
-<li class="chapter" data-level="4.7" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-yönetimi-liderleri"><i class="fa fa-check"></i><b>4.7</b> Kalite Yönetimi Liderleri</a><ul>
+<li class="chapter" data-level="4.7" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-yönetimi-liderleri"><i class="fa fa-check"></i><b>4.7</b> Kalite Yönetimi Liderleri</a>
+<ul>
 <li class="chapter" data-level="4.7.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#walter-shewhart"><i class="fa fa-check"></i><b>4.7.1</b> Walter Shewhart</a></li>
 <li class="chapter" data-level="4.7.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#w.-edwards-deming"><i class="fa fa-check"></i><b>4.7.2</b> W. Edwards Deming</a></li>
 <li class="chapter" data-level="4.7.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#joseph-m.-juran"><i class="fa fa-check"></i><b>4.7.3</b> Joseph M. Juran</a></li>
@@ -173,7 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.9" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-sistemleri-ve-standartları"><i class="fa fa-check"></i><b>4.9</b> Kalite Sistemleri ve Standartları</a></li>
 <li class="chapter" data-level="4.10" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#iso-9000-kalite-standartları"><i class="fa fa-check"></i><b>4.10</b> ISO 9000 Kalite Standartları</a></li>
 <li class="chapter" data-level="4.11" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#malcolm-baldrige-ulusal-kalite-ödülü"><i class="fa fa-check"></i><b>4.11</b> Malcolm Baldrige Ulusal Kalite Ödülü</a></li>
-<li class="chapter" data-level="4.12" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma"><i class="fa fa-check"></i><b>4.12</b> Altı Sigma</a><ul>
+<li class="chapter" data-level="4.12" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma"><i class="fa fa-check"></i><b>4.12</b> Altı Sigma</a>
+<ul>
 <li class="chapter" data-level="4.12.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#neden-6sigma"><i class="fa fa-check"></i><b>4.12.1</b> Neden 6<span class="math inline">\(\sigma\)</span></a></li>
 <li class="chapter" data-level="4.12.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#sigma-kalite-seviyesi"><i class="fa fa-check"></i><b>4.12.2</b> Sigma Kalite Seviyesi</a></li>
 <li class="chapter" data-level="4.12.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma-proje-yönetimi"><i class="fa fa-check"></i><b>4.12.3</b> Altı Sigma Proje Yönetimi</a></li>
@@ -181,9 +186,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.13" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-maliyetleri"><i class="fa fa-check"></i><b>4.13</b> Kalite Maliyetleri</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dmaic-süreci.html"><a href="dmaic-süreci.html"><i class="fa fa-check"></i><b>5</b> DMAIC Süreci</a></li>
-<li class="chapter" data-level="6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html"><i class="fa fa-check"></i><b>6</b> İstatistiksel Kavramlar</a><ul>
+<li class="chapter" data-level="6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html"><i class="fa fa-check"></i><b>6</b> İstatistiksel Kavramlar</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#verilerin-toplanması-ve-sunulması"><i class="fa fa-check"></i><b>6.1</b> Verilerin Toplanması ve Sunulması</a></li>
-<li class="chapter" data-level="6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#değişkenliğin-tanımlanması"><i class="fa fa-check"></i><b>6.2</b> Değişkenliğin Tanımlanması</a><ul>
+<li class="chapter" data-level="6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#değişkenliğin-tanımlanması"><i class="fa fa-check"></i><b>6.2</b> Değişkenliğin Tanımlanması</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#dal-yaprak-grafiği"><i class="fa fa-check"></i><b>6.2.1</b> Dal-Yaprak Grafiği</a></li>
 <li class="chapter" data-level="6.2.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#frekans-dağılımı"><i class="fa fa-check"></i><b>6.2.2</b> Frekans Dağılımı</a></li>
 <li class="chapter" data-level="6.2.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#histogram"><i class="fa fa-check"></i><b>6.2.3</b> Histogram</a></li>
@@ -192,18 +199,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#kutu-grafiği-box-plot"><i class="fa fa-check"></i><b>6.2.6</b> Kutu Grafiği (Box Plot)</a></li>
 <li class="chapter" data-level="6.2.7" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#olasılık-dağılımları"><i class="fa fa-check"></i><b>6.2.7</b> Olasılık Dağılımları</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-kesikli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.3</b> Önemli Kesikli Olasılık Dağılımları</a><ul>
+<li class="chapter" data-level="6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-kesikli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.3</b> Önemli Kesikli Olasılık Dağılımları</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#hipergeometrik-dağılım"><i class="fa fa-check"></i><b>6.3.1</b> Hipergeometrik Dağılım</a></li>
 <li class="chapter" data-level="6.3.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom-dağılımı"><i class="fa fa-check"></i><b>6.3.2</b> Binom Dağılımı</a></li>
 <li class="chapter" data-level="6.3.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#poisson-dağılımı"><i class="fa fa-check"></i><b>6.3.3</b> Poisson Dağılımı</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-sürekli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.4</b> Önemli Sürekli Olasılık Dağılımları</a><ul>
+<li class="chapter" data-level="6.4" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-sürekli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.4</b> Önemli Sürekli Olasılık Dağılımları</a>
+<ul>
 <li class="chapter" data-level="6.4.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#normal-dağılım"><i class="fa fa-check"></i><b>6.4.1</b> Normal Dağılım</a></li>
 <li class="chapter" data-level="6.4.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#üstel-dağılım"><i class="fa fa-check"></i><b>6.4.2</b> Üstel Dağılım</a></li>
 <li class="chapter" data-level="6.4.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#gamma-dağılımı"><i class="fa fa-check"></i><b>6.4.3</b> Gamma Dağılımı</a></li>
 </ul></li>
 <li class="chapter" data-level="6.5" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#olasılık-grafikleri"><i class="fa fa-check"></i><b>6.5</b> Olasılık Grafikleri</a></li>
-<li class="chapter" data-level="6.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#bazı-faydalı-yaklaşımlar"><i class="fa fa-check"></i><b>6.6</b> Bazı Faydalı Yaklaşımlar</a><ul>
+<li class="chapter" data-level="6.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#bazı-faydalı-yaklaşımlar"><i class="fa fa-check"></i><b>6.6</b> Bazı Faydalı Yaklaşımlar</a>
+<ul>
 <li class="chapter" data-level="6.6.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom---hipergeometrik"><i class="fa fa-check"></i><b>6.6.1</b> Binom - Hipergeometrik</a></li>
 <li class="chapter" data-level="6.6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom---poisson"><i class="fa fa-check"></i><b>6.6.2</b> Binom - Poisson</a></li>
 <li class="chapter" data-level="6.6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#normal---binom"><i class="fa fa-check"></i><b>6.6.3</b> Normal - Binom</a></li>
@@ -214,45 +224,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.10" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#serpilme-scatter-diyagramı"><i class="fa fa-check"></i><b>6.10</b> Serpilme (Scatter) Diyagramı</a></li>
 <li class="chapter" data-level="6.11" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#kusur-konsantrasyon-diyagramı"><i class="fa fa-check"></i><b>6.11</b> Kusur Konsantrasyon Diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><i class="fa fa-check"></i><b>7</b> Değişkenlik ve Kontrol Diyagramlarına Giriş</a><ul>
-<li class="chapter" data-level="7.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#değişkenlik-kavramı-ve-kaynakları"><i class="fa fa-check"></i><b>7.1</b> Değişkenlik Kavramı ve Kaynakları</a><ul>
+<li class="chapter" data-level="7" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><i class="fa fa-check"></i><b>7</b> Değişkenlik ve Kontrol Diyagramlarına Giriş</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#değişkenlik-kavramı-ve-kaynakları"><i class="fa fa-check"></i><b>7.1</b> Değişkenlik Kavramı ve Kaynakları</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#doğruluk-ve-hassasiyet"><i class="fa fa-check"></i><b>7.1.1</b> Doğruluk ve Hassasiyet</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-diyagramlarına-giriş"><i class="fa fa-check"></i><b>7.2</b> Kontrol Diyagramlarına Giriş</a><ul>
+<li class="chapter" data-level="7.2" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-diyagramlarına-giriş"><i class="fa fa-check"></i><b>7.2</b> Kontrol Diyagramlarına Giriş</a>
+<ul>
 <li class="chapter" data-level="7.2.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-limitlerinin-seçimi"><i class="fa fa-check"></i><b>7.2.1</b> Kontrol Limitlerinin Seçimi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>8</b> Ölçülebilir Değişkenler için Kontrol Diyagramları</a><ul>
+<li class="chapter" data-level="8" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>8</b> Ölçülebilir Değişkenler için Kontrol Diyagramları</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#tekil-ölçümler-için-i-ve-mr-individual-moving-range-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.1</b> Tekil Ölçümler için I ve MR (Individual-Moving Range) Kontrol Diyagramları</a></li>
 <li class="chapter" data-level="8.2" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#x-r-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.2</b> X-R Kontrol Diyagramları</a></li>
 <li class="chapter" data-level="8.3" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#alt-grup-kavramı-ve-örneklem-büyüklüğünün-belirlenmesi"><i class="fa fa-check"></i><b>8.3</b> Alt Grup Kavramı ve Örneklem Büyüklüğünün Belirlenmesi</a></li>
 <li class="chapter" data-level="8.4" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#kontrol-dışı-olma-durumu"><i class="fa fa-check"></i><b>8.4</b> Kontrol Dışı Olma Durumu</a></li>
 <li class="chapter" data-level="8.5" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#x-s-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.5</b> X-S Kontrol Diyagramları</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>9</b> Ölçülemeyen Özellikler için Kontrol Diyagramları</a><ul>
+<li class="chapter" data-level="9" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>9</b> Ölçülemeyen Özellikler için Kontrol Diyagramları</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#p-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.1</b> p kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.2" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#np-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.2</b> np kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.3" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#c-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.3</b> c kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.4" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#u-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.4</b> u kontrol diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html"><i class="fa fa-check"></i><b>10</b> Proses Yeterlilik Analizi</a><ul>
+<li class="chapter" data-level="10" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html"><i class="fa fa-check"></i><b>10</b> Proses Yeterlilik Analizi</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#neden-pca"><i class="fa fa-check"></i><b>10.1</b> Neden PCA</a></li>
 <li class="chapter" data-level="10.2" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#histogramlar-veya-olasılık-grafikleri"><i class="fa fa-check"></i><b>10.2</b> Histogramlar veya olasılık grafikleri</a></li>
 <li class="chapter" data-level="10.3" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#proses-yeterliliği-ve-sigma-kalite-seviyesi"><i class="fa fa-check"></i><b>10.3</b> Proses Yeterliliği ve Sigma Kalite Seviyesi</a></li>
-<li class="chapter" data-level="10.4" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-c_pk-ve-c_pm-proses-yeterlilik-indeksleri"><i class="fa fa-check"></i><b>10.4</b> <span class="math inline">\(C_{p}\)</span>, <span class="math inline">\(C_{pk}\)</span> ve <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik İndeksleri</a><ul>
+<li class="chapter" data-level="10.4" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-c_pk-ve-c_pm-proses-yeterlilik-indeksleri"><i class="fa fa-check"></i><b>10.4</b> <span class="math inline">\(C_{p}\)</span>, <span class="math inline">\(C_{pk}\)</span> ve <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik İndeksleri</a>
+<ul>
 <li class="chapter" data-level="10.4.1" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.1</b> <span class="math inline">\(C_{p}\)</span> Proses Yeterlilik Indeksi</a></li>
 <li class="chapter" data-level="10.4.2" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_pk-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.2</b> <span class="math inline">\(C_{pk}\)</span> Proses Yeterlilik Indeksi</a></li>
 <li class="chapter" data-level="10.4.3" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_pm-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.3</b> <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik Indeksi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>11</b> Diğer Kontrol Diyagramları</a><ul>
-<li class="chapter" data-level="11.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#cusum-cumulative-sum-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.1</b> CUSUM (Cumulative Sum) Kontrol Diyagramı</a><ul>
+<li class="chapter" data-level="11" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>11</b> Diğer Kontrol Diyagramları</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#cusum-cumulative-sum-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.1</b> CUSUM (Cumulative Sum) Kontrol Diyagramı</a>
+<ul>
 <li class="chapter" data-level="11.1.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#çizelge-tabular-yöntemi"><i class="fa fa-check"></i><b>11.1.1</b> Çizelge (Tabular) Yöntemi</a></li>
 <li class="chapter" data-level="11.1.2" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#v-maskesi-yöntemi"><i class="fa fa-check"></i><b>11.1.2</b> V Maskesi Yöntemi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.2" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#ewma-exponentially-weighted-moving-average-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.2</b> EWMA (Exponentially Weighted Moving Average) Kontrol Diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html"><i class="fa fa-check"></i><b>12</b> Kabul Örneklemesi</a><ul>
+<li class="chapter" data-level="12" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html"><i class="fa fa-check"></i><b>12</b> Kabul Örneklemesi</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#örnekleme-planı-tipleri"><i class="fa fa-check"></i><b>12.1</b> Örnekleme Planı Tipleri</a></li>
 <li class="chapter" data-level="12.2" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#parti-oluşturma"><i class="fa fa-check"></i><b>12.2</b> Parti Oluşturma</a></li>
 <li class="chapter" data-level="12.3" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#rasgele-örnek-alma"><i class="fa fa-check"></i><b>12.3</b> Rasgele Örnek Alma</a></li>
@@ -260,7 +280,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#çalışma-karakteristiği-eğrisi-oc-operating-characteristic-curve"><i class="fa fa-check"></i><b>12.5</b> Çalışma Karakteristiği Eğrisi (OC-Operating Characteristic Curve)</a></li>
 <li class="chapter" data-level="12.6" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#oc-eğrisi-üzerindeki-önemli-noktalar"><i class="fa fa-check"></i><b>12.6</b> OC Eğrisi Üzerindeki Önemli Noktalar</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ekler.html"><a href="ekler.html"><i class="fa fa-check"></i><b>13</b> Ekler</a><ul>
+<li class="chapter" data-level="13" data-path="ekler.html"><a href="ekler.html"><i class="fa fa-check"></i><b>13</b> Ekler</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="ekler.html"><a href="ekler.html#ölçülebilir-değişkenler-için-kontrol-grafiği-faktör-tablosu"><i class="fa fa-check"></i><b>13.1</b> Ölçülebilir Değişkenler için Kontrol Grafiği Faktör Tablosu</a></li>
 <li class="chapter" data-level="13.2" data-path="ekler.html"><a href="ekler.html#standart-normal-dağılım-tablosu"><i class="fa fa-check"></i><b>13.2</b> Standart Normal Dağılım Tablosu</a></li>
 </ul></li>
@@ -285,9 +306,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="kalite-yönetimi-temel-kavramları" class="section level1">
+<div id="kalite-yönetimi-temel-kavramları" class="section level1" number="4">
 <h1><span class="header-section-number">Bölüm 4</span> Kalite Yönetimi Temel Kavramları</h1>
-<div id="kalite-kavramı" class="section level2">
+<div id="kalite-kavramı" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Kalite Kavramı</h2>
 <p><img src="images/quality1.jpg" style="float: right;" width="400" height="260" title="Quality" /></p>
 <p>Kalite tanımı birçok farklı şekilde yapılabilir. Kalitenin sözlük anlamı <em>mükemmeliyet derecesi</em> olmakla birlikte, ürün/hizmette mevcut olması istenen özellik veya özellikler, kalite tanımı için başlangıç noktası olarak seçilebilir. Kalitenin çok boyutlu ve doğası gereği göreceli yapısı ortak bir tanımdan ziyade farklı bakış açılarıyla geliştirilmiş kalite tanımlarını ortaya çıkarmıştır. Amerikan Kalite Derneği (ASQ); kaliteyi farklı tanımlamaların yapılabileceği öznel bir terim olarak tanımlamıştır.</p>
@@ -311,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><code>Kalite terminolojisinde ürün (product) hem ürün hem de hizmet anlamında kullanılmaktdır.</code></p>
 <p><strong>Kalite iyileştirme (quality improvement):</strong> Proses ve ürünler açısından değişkenliğin azaltılması olarak tanımlanmaktadır. Fazla miktarda değişkenlik performansta kayıba (waste) neden olmaktadır, para kaybı, zaman kaybı veya enerji kaybı örnek olarak verilebilir. Kalite iyileştirmenin bir diğer tanımı da <em>kaybın azaltılması (reduction of waste)</em> olarak yapılabilir.</p>
 </div>
-<div id="kalite-boyutları" class="section level2">
+<div id="kalite-boyutları" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Kalite Boyutları</h2>
 <p>Kalitenin çok boyutlu yapısı farklı kalite tanımlarının ortaya çıkmasına neden olmuştur. Garvin (1987), kalitenin sekiz boyutunu şöyle tanımlamaktadır.</p>
 <p><strong>1. Performans:</strong> Temel ürün özellikleri</p>
@@ -325,7 +346,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><br></p>
 <pre><code>Kalite çalışmalarında tüm boyutlar dikkate alınmalıdır.</code></pre>
 </div>
-<div id="kalite-mühendislik-terminolojisi" class="section level2">
+<div id="kalite-mühendislik-terminolojisi" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Kalite Mühendislik Terminolojisi</h2>
 <p>Her ürün, kullanıcının veya tüketicinin kalite göstergesi olarak tanımladığı bir takım unsurlara sahiptir. Bu unsurlara genellikle kalite karakteristikleri denir. Aynı zamanda kalite için kritik (critical to quality (CTQ)) karakteristikler olarak da tanımlanmaktadır. Kalite karakteristikleri birkaç türde olabilir:</p>
 <ul>
@@ -340,7 +361,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Kalite özellikleri genellikle spesifikasyonlara göre değerlendirilir. Üretilen bir ürün için <strong>spesifikasyonlar (specifications)</strong>, ürünün alt parçaları ve nihai ürünün kalite özellikleri için istenen değerlerdir. Örneğin, bir otomobil şanzımanında kullanılan bir şaftın çapı çok büyük veya çok küçük olamaz, gerekli boyutta olmalıdır, aksi taktirde arızaya neden olacaktır.</p>
 <p>Kalite karakteristikleri için istenen değer <strong>nominal</strong> veya <strong>hedef değer (target value)</strong> olarak tanımlanmaktadır. Bu hedef değerler genellikle bir aralıkla sınırlandırılır, bu yapıda en büyük değer; <strong>üst sınır (upper specification limit (USL))</strong> ve en küçük değer; <strong>alt sınır (lower specification limit (LSL))</strong> olarak adlandırılır. Bazı kalite karakteristiklerinin spesifikasyon limitleri tek taraflı olabilir. Spesifikasyon sınırları genellikle tasarım mühendisleri tarafından belirlenir.</p>
 </div>
-<div id="toplam-kalite-yönetiminin-tarihsel-gelişimi" class="section level2">
+<div id="toplam-kalite-yönetiminin-tarihsel-gelişimi" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Toplam Kalite Yönetiminin Tarihsel Gelişimi</h2>
 <p><img src="images/timeline.png" style="float: center;" width="1000" height="600" title="timeline" /></p>
 <p>Önemli zaman dilimlerinin detaylandırıldığı tarihsel gelişimi temel aşamaları ile altı ana başlık altında toplamak mümkündür.</p>
@@ -352,7 +373,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>6.</strong> Toplam kalite yönetimi</p>
 <p>Rekabetçi ortamda çağdaş kalite politikası oluşturulması ve geliştirilmesi önem arz etmektedir, müşteri fiyat-kalite ikileminde tercih yapmak durumunda bırakılmamalıdır.</p>
 </div>
-<div id="kalite-kontrol-ve-iyileştirme-için-istatistiksel-yöntemler" class="section level2">
+<div id="kalite-kontrol-ve-iyileştirme-için-istatistiksel-yöntemler" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Kalite Kontrol ve İyileştirme için İstatistiksel Yöntemler</h2>
 <ul>
 <li><p><strong>İstatistiksel proses kontrol (SPC):</strong> Proses kısaca girdiler ve çıktıdan oluşan bir sistem olarak tanımlanabilir. Kontrol diyagramları istatistiksel proses kontrol için temel yöntemlerden biridir.</p></li>
@@ -365,14 +386,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Kalite mühendisliği çabalarının temel amacı, ürünün temel kalite özelliklerindeki değişkenliğin sistematik olarak azaltılmasıdır.</p>
 <p><img src="images/percentapp.png" style="float: center;" width="300" height="300" title="" /> <img src="images/3d.png" style="float: center;" width="450" height="300" title="" /></p>
 </div>
-<div id="kalite-iyileştirmede-yönetim-cephesi" class="section level2">
+<div id="kalite-iyileştirmede-yönetim-cephesi" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Kalite İyileştirmede Yönetim Cephesi</h2>
 <p>SPC ve deney tasarımı dahil istatistiksel teknikler ve diğer problem çözme araçları kalite kontrol ve iyileştirmenin teknik temelini oluşturur. Ancak, en etkin kullanım, bu tekniklerin kalite iyileştirmeye odaklanan bir yönetim sistemi içinde uygulanmasıyla mümkündür. Bir kuruluşun yönetim sistemi, genel kalite iyileştirme felsefesini doğru bir şekilde yönlendirmek ve işletmenin tüm yönlerine yayılmasını sağlamak için organize edilmelidir. Kalitenin etkin yönetimi için üç faaliyetin başarılı bir şekilde yürütülmesi gerekir: kalite planlama, kalite güvencesi ve kalite kontrolü ve iyileştirme.</p>
 <p><strong>Kalite planlama:</strong> Kalite planlama stratejik bir faaliyettir ve bir kuruluşun uzun vadeli iş başarısı için ürün geliştirme planı, finansal plan, pazarlama planı ve insan kaynaklarının kullanımına yönelik planlar kadar önemlidir. Stratejik bir kalite planı olmadan, hatalı tasarımlar, üretim hataları, saha arızaları ve müşteri şikayetleri oluşacak ve muazzam miktarda zaman, para ve çaba boşa harcanacaktır. Kalite planlaması, müşterilerin tanımlanmasını ve ihtiyaçlarını tanımlamayı içerir (buna bazen müşterinin sesini dinleme (voice of the customer (VOC)) denir). Daha sonra müşteri beklentilerini karşılayan veya aşan ürün veya hizmetler geliştirilmelidir. Kalitenin sekiz boyutu bu çabanın önemli bir parçasıdır. Kuruluş daha sonra bu ürün ve hizmetlerin nasıl gerçekleştirileceğini belirlemelidir. Belirli, sistematik bir temelde kalite iyileştirme planlaması da bu sürecin önemli bir parçasıdır.</p>
 <p><strong>Kalite güvencesi:</strong> Ürün ve hizmetlerin kalite seviyelerinin uygun şekilde sürdürülmesini ve tedarikçi ve müşteri kalite sorunlarının uygun şekilde çözülmesini sağlayan faaliyetler bütünüdür.</p>
 <p><strong>Kalite kontrol ve iyileştirme:</strong> Kalite kontrol ve iyileştirme, ürün ve hizmetlerin gereksinimleri karşılamasını ve sürekli olarak iyileştirilmesini sağlamak için kullanılan faaliyetler dizisini içerir. Değişkenlik genellikle düşük kalitenin ana kaynağı olduğundan, SPC ve deney tasarımı dahil istatistiksel teknikler, kalite kontrol ve iyileştirmenin ana araçlarıdır. Kalite iyileştirme genellikle proje bazında yapılır ve istatistiksel yöntemlerle ilgili özel bilgiye ve bunların uygulanmasında deneyime sahip personel tarafından yönetilen ekipleri içerir.</p>
 </div>
-<div id="kalite-yönetimi-liderleri" class="section level2">
+<div id="kalite-yönetimi-liderleri" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Kalite Yönetimi Liderleri</h2>
 <p>Kaliteyi iyileştirmenin istatistiksel metodolojisine birçok kişi katkıda bulunmuştur ancak uygulama ve yönetim felsefesi açısından önemli katkıları bulunan bilim insanları üzerinde durulacaktır.</p>
 <ul>
@@ -384,11 +405,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Kaoru Ishikawa</li>
 <li>Genichi Taguchi</li>
 </ul>
-<div id="walter-shewhart" class="section level3">
+<div id="walter-shewhart" class="section level3" number="4.7.1">
 <h3><span class="header-section-number">4.7.1</span> Walter Shewhart</h3>
 <p>Walter Andrew Shewhart Amerikalı bir fizikçi, mühendis ve istatistikçidir. İstatistiksel kalite kontrolün babası olarak bilinir. Kontrol diyagramlarını ilk olarak kullanan kişidir. Kontrol diyagramlarının kullanımı genellikle istatistiksel kalite kontrolün resmi başlangıcı olarak kabul edilmektedir.</p>
 </div>
-<div id="w.-edwards-deming" class="section level3">
+<div id="w.-edwards-deming" class="section level3" number="4.7.2">
 <h3><span class="header-section-number">4.7.2</span> W. Edwards Deming</h3>
 <p><img src="images/Deming.jpeg" style="float: right;" width="230" height="300" title="Deming" /></p>
 <p>W. Edwards Deming, Wyoming Üniversitesi ve Yale Üniversitesi’nde mühendislik ve fizik eğitimi almıştır. Western Electric için çalışmış ve kontrol şemasının (control charts) geliştiricisi Walter A. Shewhart’tan büyük ölçüde etkilenmiştir.</p>
@@ -423,7 +444,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Deming’in 14 maddesini okurken, organizasyonel değişime güçlü bir vurgu yapıldığı fark edilmaktedir. Ayrıca, bu değişim sürecine rehberlik etmede yönetimin rolü büyük önem taşımaktadır. Ancak nelerin değişmesi gerekiyor ve bu değişim süreci nasıl başlatılmalı? Bu noktada istatistiksel yöntemler devreye girmektedir.</p>
 <p><span style="color: red;">Deming’in tanımladığı yönetimdeki 7 ölümcül hastalık nedir araştırınız.</span></p>
 </div>
-<div id="joseph-m.-juran" class="section level3">
+<div id="joseph-m.-juran" class="section level3" number="4.7.3">
 <h3><span class="header-section-number">4.7.3</span> Joseph M. Juran</h3>
 <p><img src="images/Juran.jpg" style="float: right;" width="200" height="270" title="Juran" /></p>
 <p>Joseph M. Juran Minnesota Üniversitesi Elektrik Mühendisliği Bölümü’nden mezun olmuştur. William Edwards Deming gibi o da gerek ABD’de gerek Japonya’da toplam kalite yönetiminin yaygınlaşmasında çok önemli rol oynamıştır. 1981 yılında Japon İmparatoru, Hirohito tarafından Order of Sacred Treasure ile ödüllendirilmiştir.</p>
@@ -436,7 +457,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><strong>İyileştirme:</strong> Mevcut seviyeden daha yüksek performans ve kalite seviyelerine ulaşma hedefi. Juran, iyileştirmenin proje bazında olması gerektiğini vurgulamaktadır. Bu projeler tipik olarak üçlemenin planlama aşamasında belirlenmelidir.</p></li>
 </ul>
 </div>
-<div id="armand-v.-feigenbaum" class="section level3">
+<div id="armand-v.-feigenbaum" class="section level3" number="4.7.4">
 <h3><span class="header-section-number">4.7.4</span> Armand V. Feigenbaum</h3>
 <p><img src="images/Feigenbaum.png" style="float: right;" width="200" height="210" title="Feigenbaum" /></p>
 <p>Armand V. Feigenbaum, Lisans eğitimini Union College’de, Yüksek Lisans ve Doktora Eğitimini ise MIT (Massachusetts Institute of Technology)’de tamamlamıştır. 1961 – 1963 yılları arasında Amerikan Kalite Topluluğu’na (American Society for Quality) başkanlık etmiştir.</p>
@@ -451,7 +472,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>vurgulamaktadır.</p>
 <hr />
 </div>
-<div id="philip-crosby" class="section level3">
+<div id="philip-crosby" class="section level3" number="4.7.5">
 <h3><span class="header-section-number">4.7.5</span> Philip Crosby</h3>
 <p>Philip B. Crosby, kalite uzmanıdır ve <code>sıfır hata görüşü</code> ile tanınmaktadır. Crosby’ye göre kalite, yerine göre kullanımdır ve gereksiz kullanım maliyetiyle değerlendirilir. Crosby kalitenin yaklaşımını mutlak 4 esas ile açıklamıştır;</p>
 <ul>
@@ -461,22 +482,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Kalite maliyet ile ölçülür.</p></li>
 </ul>
 </div>
-<div id="kaoru-ishikawa" class="section level3">
+<div id="kaoru-ishikawa" class="section level3" number="4.7.6">
 <h3><span class="header-section-number">4.7.6</span> Kaoru Ishikawa</h3>
 <p>Kaoru Ishikawa, Japonya’da toplam kalite yönetimine katkıda bulunan liderlerin başında gelmektedir. İkinci dünya savaşı sonrasında ABD’de Deming ve Juran ile tanışmıştır. Ishikawa, kalite kontrol alanındaki çalışmaları ile Japonya’da kalite bilincinin yaygınlaşmasında önemli rol oynamıştır.</p>
 </div>
-<div id="genichi-taguchi" class="section level3">
+<div id="genichi-taguchi" class="section level3" number="4.7.7">
 <h3><span class="header-section-number">4.7.7</span> Genichi Taguchi</h3>
 <p>Genichi Taguchi, mühendis ve istatistikçidir. Varyasyonun azaltılması ve performans sürekliliğine odaklanmıştır. Ayrıca Taguchi tarafından önerilen kalite kayıp fonksiyonu kalite yönetim literatüründe önemli yere sahiptir.</p>
 </div>
 </div>
-<div id="toplam-kalite-yönetimi" class="section level2">
+<div id="toplam-kalite-yönetimi" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Toplam Kalite Yönetimi</h2>
 <p>Toplam Kalite Yönetimi (TQM), organizasyon temelinde kalite iyileştirme aktivitelerinin uygulanması ve yönetilmesini kapsayan bir stratejidir.</p>
 <p>Geleneksel yönetim yaklaşımına odaklanan işletmelerde gelişme <strong>reaktif</strong> tarzdadır. Bu yapıda müşteri şikayeti durumunda hatanın düzeltilmesi, tekrar üretim ve satış döngüsü gerçekleşir. Hataları düzeltme yerine önleme yaklaşımını içeren <strong>proaktif</strong> gelişme modeli ise toplam kalite yönetiminin temelini oluşturmaktadır. Hatalar oluşmadan ve müşteriye ulaşmadan önleme hedefindedir.</p>
 <p>Tüketici isteklerini en ekonomik şekilde karşılamak hedefiyle işletme organizasyonu içerisindeki çeşitli birimlerin; kalitenin yaratılması, yaşatılması ve geliştirilmesi yolundaki çabalarını bir araya getirip düzenlenmesini sağlayan etkili sistem <strong>toplam kalite kontrol</strong> olarak tanımlanır.</p>
 </div>
-<div id="kalite-sistemleri-ve-standartları" class="section level2">
+<div id="kalite-sistemleri-ve-standartları" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> Kalite Sistemleri ve Standartları</h2>
 <p><a href="https://www.iso.org/home.html">ISO</a> (International Organization for Standardization), Uluslararası Standartlar Teşkilâtı, Uluslararası Elektroteknik Komisyonu’nun çalışma sahasına giren elektrik ve elektronik mühendisliği konuları dışında, bütün teknik ve teknik dışı dallardaki standartların belirlenmesi çalışmalarını yürütmek amacıyla 1947 yılında Cenevre’de kurulmuştur.</p>
 <p>Uluslararası Standartlar Teşkilâtına <a href="https://www.iso.org/members.html">üye ülkelerin</a> sayısı 165’dir.</p>
@@ -487,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/food.png" style="float: center;" width="370" height="150" title="food" /> <img src="images/energy.png" style="float: center;" width="370" height="150" title="energy" /></p>
 <p><img src="images/security.png" style="float: center;" width="370" height="150" title="security" /> <img src="images/quality.png" style="float: center;" width="370" height="150" title="quality" /></p>
 </div>
-<div id="iso-9000-kalite-standartları" class="section level2">
+<div id="iso-9000-kalite-standartları" class="section level2" number="4.10">
 <h2><span class="header-section-number">4.10</span> ISO 9000 Kalite Standartları</h2>
 <p>ISO 9000 Kalite Sistem Standartları Mart 1987’de yayınlanmış ve birçok ülke tarafından benimsenerek uygulamaya geçilmiştir. ISO 9000 İmalat ve Hizmet endüstrilerinde kalite güvencesi için kurulmuş, kapsamlı bir standartlar kümesidir. ISO 9000 serileri, bir firmanın kalite sistemini geliştirmesini, belgelemesini ve çalıştırılmasını ister, yani firma içinde yönetiminin kalite tetkik uygulamaları için sahip olduğu sorumluluktan, satın alma politikalarından, eğitime kadar uzanan Kalite yönetim sistemleri uygulamalarının tümünü kapsar.</p>
 <p>170’den fazla ülkede ISO 9001 sertifikalı bir milyonun üzerinde şirket ve kuruluş bulunmaktadır.</p>
@@ -518,7 +539,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>ISO 9000 uygulama sürecinde yapılabilecek en önemli yanlışlık belgenin alınması ile bu sürecin sona erdiğini düşünmektir. ISO 9000 Kalite Sistem Belgesi yeter mi? sorusuna verilecek yanıt hayırdır. Çünkü IS0 9000 uygulama süreci kuruluşun kalite yönetim sisteminin gelişme ihtiyacına göre paralel olarak süreklilik arz eder. Bu nedenle Kalite yönetim sistemleri nin sürekli gelişme anlayışına uygun olarak ve müşterilerin değişen talep ve beklentilerine cevap verecek şekilde daha üst bir performans düzeyine çıkarılması için çaba sarf edilmelidir. Kalite yönetim sistemlerinin evrim sürecinde uzun vadede benimsenmesi gereken hedef sürekli mükemmellik anlayışı ile Toplam Kalite Yönetimi stratejisini geliştirmek ve bunu kuruluşun bütününe uygulayabilmektir.</p>
 <p><img src="images/9000.png" style="float: center;" width="700" height="300" title="9000" /></p>
 </div>
-<div id="malcolm-baldrige-ulusal-kalite-ödülü" class="section level2">
+<div id="malcolm-baldrige-ulusal-kalite-ödülü" class="section level2" number="4.11">
 <h2><span class="header-section-number">4.11</span> Malcolm Baldrige Ulusal Kalite Ödülü</h2>
 <p>Malcolm Baldrige Ulusal Kalite Ödülü (MBNQA) 1987 yılında ABD Kongresi tarafından oluşturulmuş kalite değerlendirme ve ödüllendirme sistemidir. Performans mükemmelliği için ABD kuruluşlarını tanımak için yıllık olarak verilmektedir. Kuruluşlara beş kategoride ödül verilmektedir: üretim, hizmet, küçük işletme, sağlık ve eğitim. Her kategoride her yıl üç ödül verilebilir. Birçok kuruluş ödüller için rekabet etmektedir ve birçok şirket, öz değerlendirme için performans mükemmelliği kriterlerini kullanmaktadır. Ödül, NIST (Ulusal Standartlar ve Teknoloji Bürosu) tarafından verilmektedir.</p>
 <p>Değerlendirmenin 1000 puan üzerinden yapıldığı ödül sisteminde yedi farklı kategori bulunmaktadır ve her biri farklı puanlara dolayısıyla farklı ağırlıklara sahiptir.</p>
@@ -534,7 +555,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><img src="images/malcolm.png" style="float: center;" width="500" height="500" title="Malcolm Baldrige" /></p>
 </div>
-<div id="altı-sigma" class="section level2">
+<div id="altı-sigma" class="section level2" number="4.12">
 <h2><span class="header-section-number">4.12</span> Altı Sigma</h2>
 <p>Motorola, ürünlerine olan talebe yanıt olarak 1980’lerin sonunda altı sigma (six sigma (6<span class="math inline">\(\sigma\)</span>)) yaklaşımını geliştirmiştir. Altı sigmanın odak noktası, ürün (kalite) özelliklerindeki değişkenliği azaltmak, başarısızlık veya kusurları minimum seviyeye indirmektir. Müşteri odaklı bir yöntem olan altı sigma, sorunun çözümü için müşterinin temel gereksinimlerine önem verir. Altı sigma, müşteri memnuniyetini arttıran, paralelinde rekabet gücünde artış sağlayan ve böylece karlılık getiren bir sistem olarak özetlenebilir. Motorola’nın 1988 yılında Malcolm Baldrige ödülünü kazanması ile daha da yaygınlaşmıştır.</p>
 <p>Sıfır hatayı hedefleyen yöntem, doğru uygulandığında oldukça başarılı sonuçlar elde etmektedir. Altı sigma yaklaşımı bir milyon üründe <em>(parts per million (ppm))</em> yalnızca 3.4’lük hata seviyesinde çalışmaktadır. Bu bakımdan mükemmeliyet hedefleyen firmalar için tercih edilen bir yaklaşımdır.</p>
@@ -543,7 +564,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Altı sigma yaklaşımında da hataları düzeltme yerine önleme yaklaşımını içeren <strong>proaktif</strong> gelişme modeli tercih edilmiştir. Problemlerin sonuçları yerine nedenleri üzerine odaklanma esastır.</p>
 <p><img src="images/normal.png" style="float: center;" width="700" height="300" title="normal" /></p>
 <p><img src="images/ndist.png" style="float: center;" width="500" height="200" title="normal distribution" /></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="kalite-yönetimi-temel-kavramları.html#cb2-1"></a>(<span class="dv">1</span><span class="fl">-0.9973</span>)<span class="op">*</span><span class="dv">1000000</span>  <span class="co">#milyon fırsattaki hata sayısı </span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="kalite-yönetimi-temel-kavramları.html#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="fl">-0.9973</span>)<span class="sc">*</span><span class="dv">1000000</span>  <span class="co">#milyon fırsattaki hata sayısı </span></span></code></pre></div>
 <pre><code>## [1] 2700</code></pre>
 <p>Motorola altı sigma konsepti, prosesdeki değişkenliği azaltmak için spesifikasyon sınırlarını ortalamadan en az altı standart sapma uzaklıkta olacak şekilde konumlandırmaktadır. Çalışmalar sonucunda uzun vadede spesifikasyon sınırları orta noktasından (-+)1.5<span class="math inline">\(\sigma\)</span> kadar sapabildiği, dolayısıyla 6<span class="math inline">\(\sigma\)</span> ile milyonda 3.4 kusurluya ulaşılabileceğini ortaya koymuştur.</p>
 <p><img src="images/sixsigma.png" style="float: center;" width="700" height="300" title="sixsigma" /></p>
@@ -551,7 +572,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><br></p>
 <p>Farklı kayma miktarlarına bağlı olarak sigma seviyeleri;</p>
 <p><img src="images/slevel.png" style="float:center;" width="600" height="350" title="Pozisyonlar" /></p>
-<div id="neden-6sigma" class="section level3">
+<div id="neden-6sigma" class="section level3" number="4.12.1">
 <h3><span class="header-section-number">4.12.1</span> Neden 6<span class="math inline">\(\sigma\)</span></h3>
 <p>6<span class="math inline">\(\sigma\)</span>’nın asıl hedefinin 3.4 ppm hata seviyesinde çalışmak olduğundan bahsetmiştik, %99.99966 hatasızlığa karşılık gelmektedir. Günlük yaşamdaki çok basit işlerde bile 6<span class="math inline">\(\sigma\)</span>’nın ne kadar önemli yere sahip olduğunu bir örnekle açıklayalım.</p>
 <p>Bir fast food restoranına gittiğinizi varsayalım. Hamburger (hamburger ekmeği, köfte, özel sos, peynir, turşu, soğan, marul ve domates), kızarmış patates ve içecek sipariş verdiniz. Siparişiniz (ürün) 10 birimden oluşuyor. %99 kalite sizi memnun eder mi? (10 birimin birbirinden bağımsız olduğu varsayılır)</p>
@@ -582,7 +603,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>6<span class="math inline">\(\sigma\)</span> ile 1.8 saniye bozuk yayın yapıyor.</li>
 </ul>
 </div>
-<div id="sigma-kalite-seviyesi" class="section level3">
+<div id="sigma-kalite-seviyesi" class="section level3" number="4.12.2">
 <h3><span class="header-section-number">4.12.2</span> Sigma Kalite Seviyesi</h3>
 <p>Altı sigma yaklaşımı, kalite seviyelendirmesini <em>sigma kalite seviyesi</em> ölçütüne bağlı olarak değerlendirmektedir. Yaklaşımın isminden de anlaşılacağı üzere hedef, sigma kalite seviyesinin 6 olmasıdır. Bir milyonda 3.4 hata olması anlamına gelen 6 sigma kalite seviyesi aynı zamanda hatasız yüzdesinin %99.99966 olması anlamına gelmektedir. Her ne kadar %99 hatasız oranı kusursuza yakınmış gibi görünse de gerçek hayatta ne denli önemli olduğunu anlamak adına örnekler verelim;</p>
 <ul>
@@ -602,7 +623,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><br></p>
 <p>Sigma seviyeleri arasında geçiş için harcanacak çaba üst seviyelerde giderek artmaktadır. Sigma seviyesinin 2’den 3’e çıkarılması için hata sayısında yaklaşık <strong>4.6</strong> katlık bir azalma gerekmektedir. Benzer şekilde 3’den 4’e çıkarmak için <strong>10.7</strong> katlık, 4’den 5’e çıkarmak için <strong>26.7</strong> katlık ve 5’den 6’ya çıkarmak için <strong>68.5</strong> katlık bir iyileştirme gerekmektedir.</p>
 </div>
-<div id="altı-sigma-proje-yönetimi" class="section level3">
+<div id="altı-sigma-proje-yönetimi" class="section level3" number="4.12.3">
 <h3><span class="header-section-number">4.12.3</span> Altı Sigma Proje Yönetimi</h3>
 <p>Altı sigma yaklaşımının uygulaması bu alanda uzmanlaşan kişiler tarafından gerçekleştirilmektedir. Uzmanlar, bilgi ve donanımlarına bağlı olarak; yeşil kuşak, kara kuşak, uzman kara kuşak, şampiyon ve liderlik konseyi olarak isimlendirilmektedir.</p>
 <p><img src="images/ssgma.png" style="float:right;" width="300" height="300" title="sixsigma" /></p>
@@ -656,7 +677,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Altı sigma yaklaşımı <strong>DMAIC</strong> olarak tanımlanan bir yol haritası eşliğinde uygulanır.</p>
 </div>
 </div>
-<div id="kalite-maliyetleri" class="section level2">
+<div id="kalite-maliyetleri" class="section level2" number="4.13">
 <h2><span class="header-section-number">4.13</span> Kalite Maliyetleri</h2>
 <p>Kalite maliyetleri ölçülebilen (kalite kontrol giderleri, üretim kaybı, hurda) ve ölçülemeyen (müşteri kaybı, pazar kaybı, imaj kaybı) kısımları nedeniyle buz dağına benzetilmektedir. Ölçülemeyen kısımların etkileri uzun zamanda görülmektedir. Kalite maliyetleri üç ana başlıkta incelenebilir;</p>
 <p><strong>Önleme maliyetleri:</strong> kalite standartlarından sapmaları önlemek amacıyla gerçekleştirilen çalışmalara ait harcamalar</p>
@@ -697,6 +718,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -717,6 +739,10 @@ gitbook.start({
 "text": null
 },
 "download": ["SPC.Notes.pdf", "SPC.Notes.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

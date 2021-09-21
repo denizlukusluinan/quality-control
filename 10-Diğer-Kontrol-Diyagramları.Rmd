@@ -128,7 +128,7 @@ plot(q, chart.all=FALSE)
 
 V maskesi yöntemi Barnard tarafından 1959 yılında önerilmiştir. Temel düşünce $C_{1},C_{2},...,C_{i}$ bütün kümülatif toplamların V maskesinin kolları arasında kalmasıdır, bu durumda proses kontrol altındadır. Kolların dışında kalan herhangi bir kümülatif toplam olması halinde proses kontrol altında değildir. V maske yapısı aşağıda yer almaktadır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/vmask2.png" style="float:center;" width="500" height="400" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/vmask2.png" style="float:center;" width="500" height="400" title="" />
 
 $d=(\frac{2}{\delta^{2}})ln(\frac{1-\beta}{\alpha}))$
 
@@ -154,7 +154,7 @@ V maskesi, hesaplanan CUSUM değerlerinin sonuncusuna karşılık gelen O nokt
 
 V maskesinin performansı, d ve $\theta$ parametreleri ile belirlenmektedir. Bu parametreler, karar verici tarafından tolere edilmek istenen 1. ve 2. tip hataları içeren risklere göre belirlenmektedir. 1. tip hata olasılığı $(\alpha)$, proses kontrol altında olmasına rağmen kontrol dışında olduğu kararına varma riskini ifade ederken, 2. tip hata olasılığı $(\beta)$ ise proses kontrol altında olmamasına rağmen kontrol altında olduğu kararına varma riskini ifade etmektedir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/vmask.png" style="float:center;" width="700" height="300" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/vmask.png" style="float:center;" width="700" height="300" title="" />
 
 
 ## EWMA (Exponentially Weighted Moving Average) Kontrol Diyagramı
@@ -256,7 +256,7 @@ $LCL=\bar{\bar{x}}-A_{2}\bar{R}\sqrt{\frac{\lambda}{(2-\lambda)}}$
 
 **Örnek1:** CUSUM başlığında yer alan Örnek1 verisi (x) için $\lambda=0.1$ ve $L=2.7$ durumunda EWMA kontrol diyagramını oluşturunuz.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ewma.png" style="float:center;" width="800" height="370" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ewma.png" style="float:center;" width="800" height="370" title="" />
 
 ```{r}
 # 1. gozlem icin EWMA

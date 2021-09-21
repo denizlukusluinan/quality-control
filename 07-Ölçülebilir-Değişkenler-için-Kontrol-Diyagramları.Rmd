@@ -8,7 +8,7 @@ I ve MR (hareket aralığı) diyagramları, ölçülebilir değişkenler için v
 
 Tekil ölçümler için kontrol diyagramlarının birçok uygulamasında, işlem değişkenliğini tahmin etmenin temeli olarak iki ardışık gözlem hareket aralığını kullanırız. Hareket aralığı şu şekilde tanımlanır:
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/mri.png" style="float: center;" width="600" height="100" title="Factor Table" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/mri.png" style="float: center;" width="600" height="100" title="Factor Table" />
 
 
 **I kontrol diyagramında**, LCL, CL ve UCL aşağıdaki formüller kullanılarak hesaplanabilir.
@@ -36,7 +36,7 @@ temsil etmektedir.
 
 Kontrol limitleri hesabı için gereken $d_{2}$ değeri, kontrol limitleri faktör tablosu kullanılarak elde edilecektir. Tabloda `n` her örneklemede prosesden muayene edilmek üzere alınan örnek sayısını temsil etmektedir. I ve MR grafikleri için `n=2` seçilir. (Faktör tablosunun detaylı haline `Ekler` kısmından ulaşabilirsiniz.)
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
 
 <br>
 
@@ -435,7 +435,7 @@ CL.x
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
 
 ```{r}
 A2=0.729
@@ -461,7 +461,7 @@ CL.R
 <br>
 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/factable.png" style="float: center;" width="500" height="300" title="Factor Table" />
 
 ```{r}
 D4=2.282
@@ -522,7 +522,7 @@ X-R kontrol diyagramları ile ilgili örneklerden görülebileceği gibi alt gru
 
 Örneklem büyüklüğünün belirlenmesi ile ilgili olarak ASQ tarafından aşağıdaki değerler önerilmiştir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ornb.png" style="float: center;" width="400" height="270" title="Örneklem Büyüklüğü" />       
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ornb.png" style="float: center;" width="400" height="270" title="Örneklem Büyüklüğü" />       
 
 Bu tablo, parti büyüklüklerine bağlı olarak önerilen örneklem büyüklüğü değerlerini sunmaktadır. Eğer bir proses günlük 4000 parça üretiyorsa, 75 toplam muayene önerilir. Bu nedenle alt grup büyüklüğü 4 ile 19 alt grup iyi bir başlangıç noktası olacaktır.
 
@@ -540,13 +540,13 @@ Bir nokta (alt grup değeri) kontrol limitleri dışına düştüğünde, proses
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/viol.png" style="float: center;" width="600" height="400" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/viol.png" style="float: center;" width="600" height="400" title="" />
 
 <br>
 
 Benzer şekilde, ölçüm değerlerinde bir trend, sürekli değişim, tekrarlı çevrimler ya da kümeleme görülmesi durumunda da kontrol dışılık durumundan söz edilmelidir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/trend.png" style="float: center;" width="550" height="350" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/trend.png" style="float: center;" width="550" height="350" title="" />
 
 
 <br>
@@ -613,7 +613,7 @@ $B_{3}=B_{5}/c_{4}$
 
 Örneklem standart sapmasını hatırlayalım; 
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/se.png" style="float: center;" width="200" height="100" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/se.png" style="float: center;" width="200" height="100" title="" />
 
 <br>
 
@@ -695,11 +695,11 @@ X-R kontrol diyagramlarında alt grup örneklem büyüklükleri (n) aynı olmad�
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/weighted.png" style="float: center;" width="600" height="300" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/weighted.png" style="float: center;" width="600" height="300" title="" />
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/examp2.png" style="float: center;" width="700" height="600" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/examp2.png" style="float: center;" width="700" height="600" title="" />
 
 <br>
 

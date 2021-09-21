@@ -1,10 +1,10 @@
 # Ders Planı
 
-**Öğretim elemanı:** Arş. Gör. Dr. Busenur KIZILASLAN
+**Öğretim elemanı:** Prof. Dr. Deniz İnan
 
-**e-posta:** busenur.sarica@marmara.edu.tr
+**e-posta:** denizlukuslu@marmara.edu.tr
 
-**Ders saati ve şekli:** Pzts 15:00-17:00, Cmts 11:00-13:00, UZEM
+**Ders saati ve yeri:** Çarşamba 08:30-12:20 A012 
 
 **Ders amacı:** İstatistiksel Kalite Kontrol tarihçesi, yöntemler ve işleyiş hakkında bilgi sahibi olmak, R uygulamaları ile güncel hayat uygulamaları gerçekleştirmek
 

@@ -125,7 +125,7 @@ Her bir hat için $C_{p}$ değerleri incelendiğinde Hat 1 ve Hat 2'nin farklı 
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cp.png" style="float: right;" width="300" height="400" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cp.png" style="float: right;" width="300" height="400" title="" />
 
 $C_{p}$ indeksinin yorumlanması bakımından aşağıdaki görsel oldukça faydalıdır. Doğal tolerans limitlerinin spesifikasyon limitlerini kapsaması, sürecin spesifikasyonları sağlaması anlamına geldiğinden ideal durumdur. Bu durum $C_{p}>1$ olması anlamına gelmektedir. 
 
@@ -222,7 +222,7 @@ Merkezileşmiş bir proseste $C_{p}$ ve  $C_{pk}$ indeksleri ile milyon fırsatt
 
 $C_{p}$ ve $C_{pk}$ değerlerini yorumlayalım.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/cpcpk.png" style="float: center;" width="600" height="700" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/cpcpk.png" style="float: center;" width="600" height="700" title="" />
 
 ### $C_{pm}$ Proses Yeterlilik Indeksi
 

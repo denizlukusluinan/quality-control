@@ -65,13 +65,13 @@ Değişkenler sayısal bir cetvel üzerinde ölçülebilen kalite özellikleridi
 
 **Basit örnekleme planı (Tek örnekleme):** partiden rasgele n birimlik bir örnekleme yapmak ve parti hakkında bu örneklemede elde edilen bilgiye göre karar vermek işlemidir. Örneğin, örnek büyüklüğü n ve kabul sayısı c ise, partiden rasgele n birim alınır. Eğer numunede c veya daha az sayıda hatalı varsa parti kabul edilir. Eğer numunede c'den daha fazla sayıda hatalı varsa parti reddedilir.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/basitor.png" style="float:center;" width="400" height="200" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/basitor.png" style="float:center;" width="400" height="200" title="" />
 
 <br>
 
 **Çift örnekleme planı:** daha karmaşıktır. Başlangıç örneklemesinde elde edilen bilgi doğrultusunda (a) parti kabul edilir, (b) reddedilir veya (c) ikinci bir örnekleme yapılır. Eğer ikinci örnekleme yapılmış ise, ilk ve ikinci örneklerden elde edilen bilgi birleştirilerek partinin kabulü veya reddedilmesi hakkında karara varılır.
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ciftkatli.png" style="float:center;" width="700" height="250" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ciftkatli.png" style="float:center;" width="700" height="250" title="" />
 
 <br>
 
@@ -149,7 +149,7 @@ Basit örnekleme planı için kabul olasılıkları ($n=89, c=2$)
 
 **Basit örnekleme planı $n=89, c=2$ için OC eğrisi;**
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/oc.png" style="float:center;" width="400" height="300" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/oc.png" style="float:center;" width="400" height="300" title="" />
 
 Eğer, örnekleme planı $n=89, c=2$ ise ve parti %2 hatalı ise, kabul olasılığı 0.74'dür. Bu değer, bu örnekleme planı kullanıldığında %2 hatalı üretim yapan bir prosesten 100 partinin alınması durumunda, partilerin 74'ünün kabul ve 26'sının reddedileceği anlamına gelmektedir. 
 
@@ -159,7 +159,7 @@ Bir örnekleme planı için OC eğrisi, üretici ve tüketici riskinin öl
 
 **İdeal OC eğrisi;**
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/idealoc.png" style="float:right;" width="300" height="250" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/idealoc.png" style="float:right;" width="300" height="250" title="" />
 
 İyi ve kötü partileri kusursuzca ayıran bir örnekleme planına ait ideal OC eğrisi yanda görülmektedir. Bu şekildeki ideal bir OC eğrisi pratikte elde edilemez. Gönderilen her parti malın aynı kalite düzeyinde olması yani, aynı oranda kusurlu parça içermesi beklenemez. Dolayısıyla, bir örnekleme planında değişen kalite seviyeleri p (kusurlu oranı) karşısında partilerin kabul olasılıkları P(a) değişimini OC eğrisi ile izlemek mümkündür.. İdeal eğrinin şekline, örnek büyüklüğünü arttırmakla yaklaşılabilir. Böylece iyi ve kötü partileri birbirinden ayırma hassasiyeti, örnekleme planında artan örnek büyüklüğü ile artar. OC eğrisinin eğitimi ne kadar büyükse, ayırma gücü o kadar büyüktür. Genellikle, kabul sayısını değiştirmek, OC eğrisinin eğimini önemli ölçüde değiştirmez. Kabul sayısı azaldığında OC eğrisi sola kayar.
 
@@ -169,13 +169,13 @@ Eğer üretici ve tüketici riskleri sıfır olursa bu plan eğrisine şeki
 
 **Farklı örneklem büyüklükleri için OC eğrileri;**
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/difsamp.png" style="float:center;" width="400" height="250" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/difsamp.png" style="float:center;" width="400" height="250" title="" />
 
 <br>
 
 **Kabul sayısındaki değişikliğin OC eğrisi üzerindeki etkisi;**
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/effectoc.png" style="float:center;" width="400" height="250" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/effectoc.png" style="float:center;" width="400" height="250" title="" />
 
 ## OC Eğrisi Üzerindeki Önemli Noktalar
 
@@ -194,13 +194,13 @@ Kalite mühendisi, OC eğrisi üzerinde belli noktalara önem vermektedir. Tedar
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/ho.png" style="float:center;" width="600" height="150" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/ho.png" style="float:center;" width="600" height="150" title="" />
 
 <br>
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/oc23.png" style="float:center;" width="400" height="250" title="" />
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/oc23.png" style="float:center;" width="400" height="250" title="" />
 
-<img src="/Users/busenursarica/Documents/GitHub/quality-control/images/oc5.png" style="float:center;" width="500" height="350" title="" /> 
+<img src="/Users/DENIZ/OneDrive/Belgeler/GitHub/quality-control/images/oc5.png" style="float:center;" width="500" height="350" title="" /> 
 
 
 <br>

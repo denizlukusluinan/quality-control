@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Bölüm 7 Değişkenlik ve Kontrol Diyagramlarına Giriş | İstatistiksel Kalite Kontrol</title>
   <meta name="description" content="Statistical quality control lecture notes" />
-  <meta name="generator" content="bookdown 0.20.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Bölüm 7 Değişkenlik ve Kontrol Diyagramlarına Giriş | İstatistiksel Kalite Kontrol" />
   <meta property="og:type" content="book" />
@@ -21,10 +21,10 @@
   <meta name="twitter:description" content="Statistical quality control lecture notes" />
   
 
-<meta name="author" content="Dr. Busenur Kızılaslan" />
+<meta name="author" content="Prof. Dr. Deniz İnan" />
 
 
-<meta name="date" content="2021-01-26" />
+<meta name="date" content="2021-09-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,8 @@
   
 <link rel="prev" href="istatistiksel-kavramlar.html"/>
 <link rel="next" href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,36 +51,35 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.17/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -99,7 +99,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -132,6 +132,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -148,19 +149,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">İstatistiksel Kalite Kontrol</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ön Bilgi</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Ön Bilgi</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#hakkımda"><i class="fa fa-check"></i><b>1.1</b> Hakkımda</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="motivasyon.html"><a href="motivasyon.html"><i class="fa fa-check"></i><b>2</b> Motivasyon</a></li>
 <li class="chapter" data-level="3" data-path="ders-planı.html"><a href="ders-planı.html"><i class="fa fa-check"></i><b>3</b> Ders Planı</a></li>
-<li class="chapter" data-level="4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html"><i class="fa fa-check"></i><b>4</b> Kalite Yönetimi Temel Kavramları</a><ul>
+<li class="chapter" data-level="4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html"><i class="fa fa-check"></i><b>4</b> Kalite Yönetimi Temel Kavramları</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-kavramı"><i class="fa fa-check"></i><b>4.1</b> Kalite Kavramı</a></li>
 <li class="chapter" data-level="4.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-boyutları"><i class="fa fa-check"></i><b>4.2</b> Kalite Boyutları</a></li>
 <li class="chapter" data-level="4.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-mühendislik-terminolojisi"><i class="fa fa-check"></i><b>4.3</b> Kalite Mühendislik Terminolojisi</a></li>
 <li class="chapter" data-level="4.4" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#toplam-kalite-yönetiminin-tarihsel-gelişimi"><i class="fa fa-check"></i><b>4.4</b> Toplam Kalite Yönetiminin Tarihsel Gelişimi</a></li>
 <li class="chapter" data-level="4.5" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-kontrol-ve-iyileştirme-için-istatistiksel-yöntemler"><i class="fa fa-check"></i><b>4.5</b> Kalite Kontrol ve İyileştirme için İstatistiksel Yöntemler</a></li>
 <li class="chapter" data-level="4.6" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-iyileştirmede-yönetim-cephesi"><i class="fa fa-check"></i><b>4.6</b> Kalite İyileştirmede Yönetim Cephesi</a></li>
-<li class="chapter" data-level="4.7" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-yönetimi-liderleri"><i class="fa fa-check"></i><b>4.7</b> Kalite Yönetimi Liderleri</a><ul>
+<li class="chapter" data-level="4.7" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-yönetimi-liderleri"><i class="fa fa-check"></i><b>4.7</b> Kalite Yönetimi Liderleri</a>
+<ul>
 <li class="chapter" data-level="4.7.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#walter-shewhart"><i class="fa fa-check"></i><b>4.7.1</b> Walter Shewhart</a></li>
 <li class="chapter" data-level="4.7.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#w.-edwards-deming"><i class="fa fa-check"></i><b>4.7.2</b> W. Edwards Deming</a></li>
 <li class="chapter" data-level="4.7.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#joseph-m.-juran"><i class="fa fa-check"></i><b>4.7.3</b> Joseph M. Juran</a></li>
@@ -173,7 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.9" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-sistemleri-ve-standartları"><i class="fa fa-check"></i><b>4.9</b> Kalite Sistemleri ve Standartları</a></li>
 <li class="chapter" data-level="4.10" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#iso-9000-kalite-standartları"><i class="fa fa-check"></i><b>4.10</b> ISO 9000 Kalite Standartları</a></li>
 <li class="chapter" data-level="4.11" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#malcolm-baldrige-ulusal-kalite-ödülü"><i class="fa fa-check"></i><b>4.11</b> Malcolm Baldrige Ulusal Kalite Ödülü</a></li>
-<li class="chapter" data-level="4.12" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma"><i class="fa fa-check"></i><b>4.12</b> Altı Sigma</a><ul>
+<li class="chapter" data-level="4.12" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma"><i class="fa fa-check"></i><b>4.12</b> Altı Sigma</a>
+<ul>
 <li class="chapter" data-level="4.12.1" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#neden-6sigma"><i class="fa fa-check"></i><b>4.12.1</b> Neden 6<span class="math inline">\(\sigma\)</span></a></li>
 <li class="chapter" data-level="4.12.2" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#sigma-kalite-seviyesi"><i class="fa fa-check"></i><b>4.12.2</b> Sigma Kalite Seviyesi</a></li>
 <li class="chapter" data-level="4.12.3" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#altı-sigma-proje-yönetimi"><i class="fa fa-check"></i><b>4.12.3</b> Altı Sigma Proje Yönetimi</a></li>
@@ -181,9 +186,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.13" data-path="kalite-yönetimi-temel-kavramları.html"><a href="kalite-yönetimi-temel-kavramları.html#kalite-maliyetleri"><i class="fa fa-check"></i><b>4.13</b> Kalite Maliyetleri</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="dmaic-süreci.html"><a href="dmaic-süreci.html"><i class="fa fa-check"></i><b>5</b> DMAIC Süreci</a></li>
-<li class="chapter" data-level="6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html"><i class="fa fa-check"></i><b>6</b> İstatistiksel Kavramlar</a><ul>
+<li class="chapter" data-level="6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html"><i class="fa fa-check"></i><b>6</b> İstatistiksel Kavramlar</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#verilerin-toplanması-ve-sunulması"><i class="fa fa-check"></i><b>6.1</b> Verilerin Toplanması ve Sunulması</a></li>
-<li class="chapter" data-level="6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#değişkenliğin-tanımlanması"><i class="fa fa-check"></i><b>6.2</b> Değişkenliğin Tanımlanması</a><ul>
+<li class="chapter" data-level="6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#değişkenliğin-tanımlanması"><i class="fa fa-check"></i><b>6.2</b> Değişkenliğin Tanımlanması</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#dal-yaprak-grafiği"><i class="fa fa-check"></i><b>6.2.1</b> Dal-Yaprak Grafiği</a></li>
 <li class="chapter" data-level="6.2.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#frekans-dağılımı"><i class="fa fa-check"></i><b>6.2.2</b> Frekans Dağılımı</a></li>
 <li class="chapter" data-level="6.2.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#histogram"><i class="fa fa-check"></i><b>6.2.3</b> Histogram</a></li>
@@ -192,18 +199,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#kutu-grafiği-box-plot"><i class="fa fa-check"></i><b>6.2.6</b> Kutu Grafiği (Box Plot)</a></li>
 <li class="chapter" data-level="6.2.7" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#olasılık-dağılımları"><i class="fa fa-check"></i><b>6.2.7</b> Olasılık Dağılımları</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-kesikli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.3</b> Önemli Kesikli Olasılık Dağılımları</a><ul>
+<li class="chapter" data-level="6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-kesikli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.3</b> Önemli Kesikli Olasılık Dağılımları</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#hipergeometrik-dağılım"><i class="fa fa-check"></i><b>6.3.1</b> Hipergeometrik Dağılım</a></li>
 <li class="chapter" data-level="6.3.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom-dağılımı"><i class="fa fa-check"></i><b>6.3.2</b> Binom Dağılımı</a></li>
 <li class="chapter" data-level="6.3.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#poisson-dağılımı"><i class="fa fa-check"></i><b>6.3.3</b> Poisson Dağılımı</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-sürekli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.4</b> Önemli Sürekli Olasılık Dağılımları</a><ul>
+<li class="chapter" data-level="6.4" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#önemli-sürekli-olasılık-dağılımları"><i class="fa fa-check"></i><b>6.4</b> Önemli Sürekli Olasılık Dağılımları</a>
+<ul>
 <li class="chapter" data-level="6.4.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#normal-dağılım"><i class="fa fa-check"></i><b>6.4.1</b> Normal Dağılım</a></li>
 <li class="chapter" data-level="6.4.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#üstel-dağılım"><i class="fa fa-check"></i><b>6.4.2</b> Üstel Dağılım</a></li>
 <li class="chapter" data-level="6.4.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#gamma-dağılımı"><i class="fa fa-check"></i><b>6.4.3</b> Gamma Dağılımı</a></li>
 </ul></li>
 <li class="chapter" data-level="6.5" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#olasılık-grafikleri"><i class="fa fa-check"></i><b>6.5</b> Olasılık Grafikleri</a></li>
-<li class="chapter" data-level="6.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#bazı-faydalı-yaklaşımlar"><i class="fa fa-check"></i><b>6.6</b> Bazı Faydalı Yaklaşımlar</a><ul>
+<li class="chapter" data-level="6.6" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#bazı-faydalı-yaklaşımlar"><i class="fa fa-check"></i><b>6.6</b> Bazı Faydalı Yaklaşımlar</a>
+<ul>
 <li class="chapter" data-level="6.6.1" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom---hipergeometrik"><i class="fa fa-check"></i><b>6.6.1</b> Binom - Hipergeometrik</a></li>
 <li class="chapter" data-level="6.6.2" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#binom---poisson"><i class="fa fa-check"></i><b>6.6.2</b> Binom - Poisson</a></li>
 <li class="chapter" data-level="6.6.3" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#normal---binom"><i class="fa fa-check"></i><b>6.6.3</b> Normal - Binom</a></li>
@@ -214,45 +224,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.10" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#serpilme-scatter-diyagramı"><i class="fa fa-check"></i><b>6.10</b> Serpilme (Scatter) Diyagramı</a></li>
 <li class="chapter" data-level="6.11" data-path="istatistiksel-kavramlar.html"><a href="istatistiksel-kavramlar.html#kusur-konsantrasyon-diyagramı"><i class="fa fa-check"></i><b>6.11</b> Kusur Konsantrasyon Diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><i class="fa fa-check"></i><b>7</b> Değişkenlik ve Kontrol Diyagramlarına Giriş</a><ul>
-<li class="chapter" data-level="7.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#değişkenlik-kavramı-ve-kaynakları"><i class="fa fa-check"></i><b>7.1</b> Değişkenlik Kavramı ve Kaynakları</a><ul>
+<li class="chapter" data-level="7" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><i class="fa fa-check"></i><b>7</b> Değişkenlik ve Kontrol Diyagramlarına Giriş</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#değişkenlik-kavramı-ve-kaynakları"><i class="fa fa-check"></i><b>7.1</b> Değişkenlik Kavramı ve Kaynakları</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#doğruluk-ve-hassasiyet"><i class="fa fa-check"></i><b>7.1.1</b> Doğruluk ve Hassasiyet</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-diyagramlarına-giriş"><i class="fa fa-check"></i><b>7.2</b> Kontrol Diyagramlarına Giriş</a><ul>
+<li class="chapter" data-level="7.2" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-diyagramlarına-giriş"><i class="fa fa-check"></i><b>7.2</b> Kontrol Diyagramlarına Giriş</a>
+<ul>
 <li class="chapter" data-level="7.2.1" data-path="değişkenlik-ve-kontrol-diyagramlarına-giriş.html"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#kontrol-limitlerinin-seçimi"><i class="fa fa-check"></i><b>7.2.1</b> Kontrol Limitlerinin Seçimi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>8</b> Ölçülebilir Değişkenler için Kontrol Diyagramları</a><ul>
+<li class="chapter" data-level="8" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>8</b> Ölçülebilir Değişkenler için Kontrol Diyagramları</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#tekil-ölçümler-için-i-ve-mr-individual-moving-range-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.1</b> Tekil Ölçümler için I ve MR (Individual-Moving Range) Kontrol Diyagramları</a></li>
 <li class="chapter" data-level="8.2" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#x-r-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.2</b> X-R Kontrol Diyagramları</a></li>
 <li class="chapter" data-level="8.3" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#alt-grup-kavramı-ve-örneklem-büyüklüğünün-belirlenmesi"><i class="fa fa-check"></i><b>8.3</b> Alt Grup Kavramı ve Örneklem Büyüklüğünün Belirlenmesi</a></li>
 <li class="chapter" data-level="8.4" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#kontrol-dışı-olma-durumu"><i class="fa fa-check"></i><b>8.4</b> Kontrol Dışı Olma Durumu</a></li>
 <li class="chapter" data-level="8.5" data-path="ölçülebilir-değişkenler-için-kontrol-diyagramları.html"><a href="ölçülebilir-değişkenler-için-kontrol-diyagramları.html#x-s-kontrol-diyagramları"><i class="fa fa-check"></i><b>8.5</b> X-S Kontrol Diyagramları</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>9</b> Ölçülemeyen Özellikler için Kontrol Diyagramları</a><ul>
+<li class="chapter" data-level="9" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>9</b> Ölçülemeyen Özellikler için Kontrol Diyagramları</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#p-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.1</b> p kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.2" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#np-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.2</b> np kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.3" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#c-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.3</b> c kontrol diyagramı</a></li>
 <li class="chapter" data-level="9.4" data-path="ölçülemeyen-özellikler-için-kontrol-diyagramları.html"><a href="ölçülemeyen-özellikler-için-kontrol-diyagramları.html#u-kontrol-diyagramı"><i class="fa fa-check"></i><b>9.4</b> u kontrol diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html"><i class="fa fa-check"></i><b>10</b> Proses Yeterlilik Analizi</a><ul>
+<li class="chapter" data-level="10" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html"><i class="fa fa-check"></i><b>10</b> Proses Yeterlilik Analizi</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#neden-pca"><i class="fa fa-check"></i><b>10.1</b> Neden PCA</a></li>
 <li class="chapter" data-level="10.2" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#histogramlar-veya-olasılık-grafikleri"><i class="fa fa-check"></i><b>10.2</b> Histogramlar veya olasılık grafikleri</a></li>
 <li class="chapter" data-level="10.3" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#proses-yeterliliği-ve-sigma-kalite-seviyesi"><i class="fa fa-check"></i><b>10.3</b> Proses Yeterliliği ve Sigma Kalite Seviyesi</a></li>
-<li class="chapter" data-level="10.4" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-c_pk-ve-c_pm-proses-yeterlilik-indeksleri"><i class="fa fa-check"></i><b>10.4</b> <span class="math inline">\(C_{p}\)</span>, <span class="math inline">\(C_{pk}\)</span> ve <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik İndeksleri</a><ul>
+<li class="chapter" data-level="10.4" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-c_pk-ve-c_pm-proses-yeterlilik-indeksleri"><i class="fa fa-check"></i><b>10.4</b> <span class="math inline">\(C_{p}\)</span>, <span class="math inline">\(C_{pk}\)</span> ve <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik İndeksleri</a>
+<ul>
 <li class="chapter" data-level="10.4.1" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_p-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.1</b> <span class="math inline">\(C_{p}\)</span> Proses Yeterlilik Indeksi</a></li>
 <li class="chapter" data-level="10.4.2" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_pk-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.2</b> <span class="math inline">\(C_{pk}\)</span> Proses Yeterlilik Indeksi</a></li>
 <li class="chapter" data-level="10.4.3" data-path="proses-yeterlilik-analizi.html"><a href="proses-yeterlilik-analizi.html#c_pm-proses-yeterlilik-indeksi"><i class="fa fa-check"></i><b>10.4.3</b> <span class="math inline">\(C_{pm}\)</span> Proses Yeterlilik Indeksi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>11</b> Diğer Kontrol Diyagramları</a><ul>
-<li class="chapter" data-level="11.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#cusum-cumulative-sum-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.1</b> CUSUM (Cumulative Sum) Kontrol Diyagramı</a><ul>
+<li class="chapter" data-level="11" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html"><i class="fa fa-check"></i><b>11</b> Diğer Kontrol Diyagramları</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#cusum-cumulative-sum-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.1</b> CUSUM (Cumulative Sum) Kontrol Diyagramı</a>
+<ul>
 <li class="chapter" data-level="11.1.1" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#çizelge-tabular-yöntemi"><i class="fa fa-check"></i><b>11.1.1</b> Çizelge (Tabular) Yöntemi</a></li>
 <li class="chapter" data-level="11.1.2" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#v-maskesi-yöntemi"><i class="fa fa-check"></i><b>11.1.2</b> V Maskesi Yöntemi</a></li>
 </ul></li>
 <li class="chapter" data-level="11.2" data-path="diğer-kontrol-diyagramları.html"><a href="diğer-kontrol-diyagramları.html#ewma-exponentially-weighted-moving-average-kontrol-diyagramı"><i class="fa fa-check"></i><b>11.2</b> EWMA (Exponentially Weighted Moving Average) Kontrol Diyagramı</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html"><i class="fa fa-check"></i><b>12</b> Kabul Örneklemesi</a><ul>
+<li class="chapter" data-level="12" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html"><i class="fa fa-check"></i><b>12</b> Kabul Örneklemesi</a>
+<ul>
 <li class="chapter" data-level="12.1" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#örnekleme-planı-tipleri"><i class="fa fa-check"></i><b>12.1</b> Örnekleme Planı Tipleri</a></li>
 <li class="chapter" data-level="12.2" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#parti-oluşturma"><i class="fa fa-check"></i><b>12.2</b> Parti Oluşturma</a></li>
 <li class="chapter" data-level="12.3" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#rasgele-örnek-alma"><i class="fa fa-check"></i><b>12.3</b> Rasgele Örnek Alma</a></li>
@@ -260,7 +280,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#çalışma-karakteristiği-eğrisi-oc-operating-characteristic-curve"><i class="fa fa-check"></i><b>12.5</b> Çalışma Karakteristiği Eğrisi (OC-Operating Characteristic Curve)</a></li>
 <li class="chapter" data-level="12.6" data-path="kabul-örneklemesi.html"><a href="kabul-örneklemesi.html#oc-eğrisi-üzerindeki-önemli-noktalar"><i class="fa fa-check"></i><b>12.6</b> OC Eğrisi Üzerindeki Önemli Noktalar</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ekler.html"><a href="ekler.html"><i class="fa fa-check"></i><b>13</b> Ekler</a><ul>
+<li class="chapter" data-level="13" data-path="ekler.html"><a href="ekler.html"><i class="fa fa-check"></i><b>13</b> Ekler</a>
+<ul>
 <li class="chapter" data-level="13.1" data-path="ekler.html"><a href="ekler.html#ölçülebilir-değişkenler-için-kontrol-grafiği-faktör-tablosu"><i class="fa fa-check"></i><b>13.1</b> Ölçülebilir Değişkenler için Kontrol Grafiği Faktör Tablosu</a></li>
 <li class="chapter" data-level="13.2" data-path="ekler.html"><a href="ekler.html#standart-normal-dağılım-tablosu"><i class="fa fa-check"></i><b>13.2</b> Standart Normal Dağılım Tablosu</a></li>
 </ul></li>
@@ -285,22 +306,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="değişkenlik-ve-kontrol-diyagramlarına-giriş" class="section level1">
+<div id="değişkenlik-ve-kontrol-diyagramlarına-giriş" class="section level1" number="7">
 <h1><span class="header-section-number">Bölüm 7</span> Değişkenlik ve Kontrol Diyagramlarına Giriş</h1>
-<div id="değişkenlik-kavramı-ve-kaynakları" class="section level2">
+<div id="değişkenlik-kavramı-ve-kaynakları" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> Değişkenlik Kavramı ve Kaynakları</h2>
 <p><img src="images/covid.jpg" style="float: right;" width="300" height="400" title="Variability" /></p>
 <p>Her prosesin doğasında var olan değişkenlik, ürünlerden birinin diğerinden farklı olmasına sebep olmaktadır. Esasen değişkenlik kavramı doğanın bir kanunudur ve herhangi bir kategorideki iki doğal maddenin birbirinin tam olarak aynısı olmamasını ifade etmektedir.</p>
 <p>Değişkenlik kilo gibi oldukça büyük ve fark edilebilir olabileceği gibi kar tanelerinin şekilleri gibi çok küçük olabilir. Değişkenlik çok küçük olduğunda öğeler özdeş görünebilir ancak hassas ölçüm aletleri ile farklılık tespit edilebilir. Eğer iki öğe aynı ölçüme sahip olarak görünüyorsa , bu durum ölçüm aletlerinin sınırlarından kaynaklanmaktadır.</p>
-<p>Herhangi bir üretim sürecinde, ne kadar iyi tasarlanmış veya özenle korunmuş olursa olsun, belirli bir miktarda doğal değişkenlik her zaman var olacaktır. Bu doğal değişkenlik veya “arka plan gürültüsü”, birçok küçük ve kaçınılmaz nedenin kümülatif etkisidir. Bu değişkenlikler, süreci revize etmekten başka, hakkında çok az şey yapılabilen şans veya rastgele değişkenlikler kategorisine aittir. Bu tür bir değişkenlik, birçoğu önemsiz olan “rastgele” veya “genel” nedenlerin karmaşık bir etkileşiminin çok sayıda etkisinin toplamıdır.</p>
-<p>Rastgele değişkenlik tek başına mevcut olduğunda, nedenlerinin izini sürmek mümkün olmayacaktır. Örneğin, ürünlerin kalitesinde değişkenliğe neden olan yaygın nedenler kümesi, proses girdilerinde rastgele farklılıklar içerebilir: atmosferik basınç veya sıcaklık değişiklikleri, trafik veya ekipman titreşimleri, elektrik veya nem dalgalanmaları ve operatörün fiziksel ve duygusal koşulları. Bu, bir madeni paranın atıldığında tura veya tura gelmesine neden olan kuvvetler kümesine benzer. Diğer bir deyişle, <em>tesadüfi nedenler sürecin içsel bir parçasıdır.</em> Bir süreçte değişkenliklerin yalnızca genel nedenleri mevcut olduğunda, sürecin “istikrarlı”, “istatistiksel kontrolde” veya “kontrolde (<strong>in control</strong>)” olduğu kabul edilir.</p>
+<p>Herhangi bir üretim sürecinde, ne kadar iyi tasarlanmış veya özenle korunmuş olursa olsun, belirli bir miktarda doğal değişkenlik her zaman var olacaktır. Bu doğal değişkenlik veya “arka plan gürültüsü,” birçok küçük ve kaçınılmaz nedenin kümülatif etkisidir. Bu değişkenlikler, süreci revize etmekten başka, hakkında çok az şey yapılabilen şans veya rastgele değişkenlikler kategorisine aittir. Bu tür bir değişkenlik, birçoğu önemsiz olan “rastgele” veya “genel” nedenlerin karmaşık bir etkileşiminin çok sayıda etkisinin toplamıdır.</p>
+<p>Rastgele değişkenlik tek başına mevcut olduğunda, nedenlerinin izini sürmek mümkün olmayacaktır. Örneğin, ürünlerin kalitesinde değişkenliğe neden olan yaygın nedenler kümesi, proses girdilerinde rastgele farklılıklar içerebilir: atmosferik basınç veya sıcaklık değişiklikleri, trafik veya ekipman titreşimleri, elektrik veya nem dalgalanmaları ve operatörün fiziksel ve duygusal koşulları. Bu, bir madeni paranın atıldığında tura veya tura gelmesine neden olan kuvvetler kümesine benzer. Diğer bir deyişle, <em>tesadüfi nedenler sürecin içsel bir parçasıdır.</em> Bir süreçte değişkenliklerin yalnızca genel nedenleri mevcut olduğunda, sürecin “istikrarlı,” “istatistiksel kontrolde” veya “kontrolde (<strong>in control</strong>)” olduğu kabul edilir.</p>
 <p>Büyüklüğü görece büyük olan ve kolayca tanımlanan değişkenlik nedenleri, “atanabilir (assignable)” veya “özel” nedenler olarak sınıflandırılır.Temel kalite özelliklerindeki bu değişkenlik genellikle üç kaynaktan ortaya çıkar:</p>
 <ul>
 <li>yanlış ayarlanmış veya kontrol edilen makineler,</li>
 <li>operatör hataları</li>
 <li>kusurlu hammadde</li>
 </ul>
-<p>Bu tür bir değişkenlik, arka plan gürültüsüyle karşılaştırıldığında genellikle büyüktür ve genellikle kabul edilemez bir işlem performansı düzeyini temsil eder. Özel değişkenlik nedenleri mevcut olduğunda, değişkenlik aşırı olacaktır ve süreç “istikrarsız”, “istatistiksel kontrol dışı” veya beklenen rastgele değişkenliğin ötesinde olarak sınıflandırılır. Kısaca “kontrol dışı (<strong>out of control</strong>)” olarak yazılır.</p>
+<p>Bu tür bir değişkenlik, arka plan gürültüsüyle karşılaştırıldığında genellikle büyüktür ve genellikle kabul edilemez bir işlem performansı düzeyini temsil eder. Özel değişkenlik nedenleri mevcut olduğunda, değişkenlik aşırı olacaktır ve süreç “istikrarsız,” “istatistiksel kontrol dışı” veya beklenen rastgele değişkenliğin ötesinde olarak sınıflandırılır. Kısaca “kontrol dışı (<strong>out of control</strong>)” olarak yazılır.</p>
 <p>Özel nedenler arasında, doğal olarak kararlı olduğunda prosesin kurcalanması veya gereksiz şekilde ayarlanması gibi yapısal değişiklikler yer alır.</p>
 <p><img src="images/vva.png" style="float: center;" width="700" height="450" title="Variability" /></p>
 <ul>
@@ -312,7 +333,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/varkay.png" style="float: center;" width="600" height="270" title="Değişkenlik Kaynakları" /></p>
 <p>Değişkenlik genel ve özel nedenlerden kaynaklanabilir. İstatistiksel kalite kontrolde , yalnız genel nedenlerden kaynaklı bir değişkenlik söz konusu ise prosesin istatistiksel olarak kontrol altında olduğu söylenebilir. Bu durumda proses stabildir ve tahmin edilebilir niteliktedir.</p>
 <p>Bir ürün müşteri beklentilerini karşılayacak veya aşacaksa, genellikle istikrarlı veya tekrarlanabilir bir işlemle üretilmelidir. Proses, ürünün kalite özelliklerinin hedef veya nominal boyutları etrafında çok az değişkenlikle üretilebilmelidir. SPC, değişkenliğin azaltılması yoluyla süreç kararlılığının sağlanmasında ve kapasitenin iyileştirilmesinde yararlı olan güçlü bir problem çözme araçları bütünüdür.</p>
-<div id="doğruluk-ve-hassasiyet" class="section level3">
+<div id="doğruluk-ve-hassasiyet" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Doğruluk ve Hassasiyet</h3>
 <p>Ölçülebilen özellikler yoluyla proses değişkenliğinin ölçümünde bir prosesin <strong>doğruluğu (accuracy)</strong> ve <strong>hassasiyeti (precision)</strong> arasındaki fark genellikle yanlış anlaşılmaktadır. Aradaki fark aşağıda açıklanmaktadır;</p>
 <ul>
@@ -330,7 +351,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Proses 4</strong> - hem <strong>doğru</strong> hem de <strong>hassas</strong> bir dağılım sergilemektedir.</p>
 </div>
 </div>
-<div id="kontrol-diyagramlarına-giriş" class="section level2">
+<div id="kontrol-diyagramlarına-giriş" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Kontrol Diyagramlarına Giriş</h2>
 <p><img src="images/tms.jpg" style="float: right;" width="250" height="300" title="The Magnificent Seven" /></p>
 <p>SPC, yirminci yüzyılın en büyük teknolojik gelişmelerinden biridir, çünkü sağlam temel ilkelere dayanır, kullanımı kolaydır, önemli bir etkiye sahiptir ve herhangi bir sürece uygulanabilir. Bu bakımdan SPC’nin yedi temel aracı (<strong>the magnificent seven</strong>)</p>
@@ -373,20 +394,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Bir kontrol şeması örneğini inceleyecek olursak; yarı iletken imalatında, ışığa duyarlı bir fotorezist malzemenin silikon levhaya uygulandığı fotolitografidir, devre modeli tipik olarak yüksek yoğunluklu UV ışığı kullanılarak dirence maruz bırakılır ve istenmeyen direnç malzemesi, gelişen bir süreçle kaldırılır. Direnç modeli tanımlandıktan sonra, alttaki malzeme ıslak kimyasal veya plazma aşındırma ile çıkarılır. Aşındırma direncini artırmak için geliştirmeyi sert pişirme işlemi ile takip etmek önemlidir.</p>
 <p>Sert pişirmede önemli bir kalite özelliği, direncin <strong>akış genişliğidir</strong>, pişirme işlemi nedeniyle ne kadar genişlediğinin bir ölçüsüdür. <strong>Her saat, beş plaka örneği alınır</strong>, ortalama akış genişliği hesaplanır ve grafiği çizilir. Çizilen tüm noktaların kontrol limitlerinin içinde olduğuna dikkat edin, bu nedenle grafik, sürecin istatistiksel kontrolde kabul edildiğini gösterir.</p>
 <p>Aşağıdaki örnek için akış genişliğinin ortalama 1.5 mikronda kontrol edilebileceğini ve akış genişliğinin standart sapmasının 0.15 mikron olduğu bilindiğini varsayalım.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-1"></a>CL=<span class="fl">1.5</span></span>
-<span id="cb108-2"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-2"></a>sigma=<span class="fl">0.15</span></span>
-<span id="cb108-3"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-3"></a>n=<span class="dv">5</span></span>
-<span id="cb108-4"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-4"></a></span>
-<span id="cb108-5"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-5"></a>sigma.x=sigma<span class="op">/</span><span class="kw">sqrt</span>(n); sigma.x</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-1" aria-hidden="true" tabindex="-1"></a>CL<span class="ot">=</span><span class="fl">1.5</span></span>
+<span id="cb108-2"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-2" aria-hidden="true" tabindex="-1"></a>sigma<span class="ot">=</span><span class="fl">0.15</span></span>
+<span id="cb108-3"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-3" aria-hidden="true" tabindex="-1"></a>n<span class="ot">=</span><span class="dv">5</span></span>
+<span id="cb108-4"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb108-5"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb108-5" aria-hidden="true" tabindex="-1"></a>sigma.x<span class="ot">=</span>sigma<span class="sc">/</span><span class="fu">sqrt</span>(n); sigma.x</span></code></pre></div>
 <pre><code>## [1] 0.06708</code></pre>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb110-1"></a>sigma.x&lt;-<span class="kw">round</span>(sigma.x,<span class="dv">4</span>); sigma.x</span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb110-1" aria-hidden="true" tabindex="-1"></a>sigma.x<span class="ot">&lt;-</span><span class="fu">round</span>(sigma.x,<span class="dv">4</span>); sigma.x</span></code></pre></div>
 <pre><code>## [1] 0.0671</code></pre>
 <p><br></p>
 <p>Örneklem standart hatasını elde ettikten sonra alt ve üst sınırları elde etmek mümkündür.</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-1"></a>UCL=CL<span class="op">+</span><span class="dv">3</span><span class="op">*</span>sigma.x</span>
-<span id="cb112-2"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-2"></a>LCL=CL<span class="dv">-3</span><span class="op">*</span>sigma.x</span>
-<span id="cb112-3"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-3"></a></span>
-<span id="cb112-4"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-4"></a>UCL; LCL</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-1" aria-hidden="true" tabindex="-1"></a>UCL<span class="ot">=</span>CL<span class="sc">+</span><span class="dv">3</span><span class="sc">*</span>sigma.x</span>
+<span id="cb112-2"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-2" aria-hidden="true" tabindex="-1"></a>LCL<span class="ot">=</span>CL<span class="dv">-3</span><span class="sc">*</span>sigma.x</span>
+<span id="cb112-3"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb112-4"><a href="değişkenlik-ve-kontrol-diyagramlarına-giriş.html#cb112-4" aria-hidden="true" tabindex="-1"></a>UCL; LCL</span></code></pre></div>
 <pre><code>## [1] 1.701</code></pre>
 <pre><code>## [1] 1.299</code></pre>
 <p>Bu yapı <span class="math inline">\(3\sigma\)</span> kontrol limitleri olarak adlandırılır. Benzer şekilde bu yapıda test ettiğimiz hipotez;</p>
@@ -407,7 +428,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Süreç kapasitesi hakkında bilgi sağlar.</p></li>
 </ul>
 <p><img src="images/cc3.png" style="float: center;" width="650" height="400" title="CC" /></p>
-<div id="kontrol-limitlerinin-seçimi" class="section level3">
+<div id="kontrol-limitlerinin-seçimi" class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Kontrol Limitlerinin Seçimi</h3>
 <p><img src="images/errors.png" style="float: right;" width="350" height="300" title="Error Types" /></p>
 <p>Kontrol limitlerinin belirlenmesi, bir kontrol diyagramı tasarlanırken verilmesi gereken kritik kararlardan biridir. Bu karara bağlı olarak Tip 1 ve Tip 2 hata olasılıklarında artış veya azalış meydana gelebilir.</p>
@@ -449,6 +470,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -469,6 +491,10 @@ gitbook.start({
 "text": null
 },
 "download": ["SPC.Notes.pdf", "SPC.Notes.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
