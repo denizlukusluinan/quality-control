@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 # İstatistiksel Kavramlar
@@ -189,6 +189,7 @@ Histogram verinin yayılımını göstermektedir ve SPC'ün temeli verideki değ
 Mukavemet örneği histogramı;
 
 ```{r warning=FALSE,cache=TRUE}
+library(plotly)
 fig<-plot_ly(x = ~muk,type = "histogram") 
 htmltools::tagList(fig)
 ```
