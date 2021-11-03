@@ -191,7 +191,7 @@ Mukavemet örneği histogramı;
 ```{r warning=FALSE,cache=TRUE}
 library(plotly)
 fig<-plot_ly(x = ~muk,type = "histogram") 
-htmltools::tagList(fig)
+fig
 ```
 
 ```{r echo=FALSE}
@@ -408,7 +408,12 @@ for(i in 0:2){
 tot[i+1]=dhyper(x = i, m = 10, n = 4, k = 5)}
 b<-sum(tot); b
 ```
-  
+Yada
+```{r}
+b<-phyper(2,10,4,5)
+
+```
+
    <br>
    
    **c)** En az üçünün sağlam olma olasılığı nedir?
@@ -434,6 +439,12 @@ z[i+1]=dhyper(x = i, m = 200, n = 800, k = 25)}
 sum<-sum(z);
 
 iade=1-sum; iade
+
+```
+yada
+
+```{r}
+1-phyper(4,200,800,25)
 
 ```
 
@@ -468,6 +479,11 @@ for(k in 0:1){
 kusur[k+1]=dbinom(x=k, size=5, prob=0.10)}
 sum(kusur)
 ```
+  yada
+  
+```{r}
+pbinom(1,5,0.10)
+```
   
   <br>
   
@@ -478,7 +494,12 @@ sum(kusur)
 
 1-sum(kusur)
 ```
-  
+ yada
+ 
+```{r}
+1-pbinom(1,5,0.10)
+```
+ 
   
  <br> 
   
@@ -535,6 +556,11 @@ for(t in 0:2){
 kusurlu[t+1]=dpois(x = t, lambda = 1000*0.004)}
 sum(kusurlu)
 ```
+  yada
+```{r}
+ppois(2, 1000*0.004)
+
+```
   
    <br> 
    
@@ -546,6 +572,11 @@ sum(kusurlu)
 kusurlu
 1-sum(kusurlu[1:2])   # 2 dahil degil
 
+```
+yada
+
+```{r}
+1-ppois(1, 1000*0.004)
 ```
 
    <br> 
